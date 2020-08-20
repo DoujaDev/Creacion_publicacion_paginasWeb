@@ -1,0 +1,40 @@
+<!-- Definición del Tipo de Documento DTD -->
+<!-- El conjunto de normas, obligaciones y restricciones que se deben seguir al crear un documento de un determinado tipo -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- También es necesario que las páginas web indiquen el namespace asociado, permite diferenciar las etiquetas 
+y atributos que pertenecen a cada lenguaje. -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!-- Tabla de codigos nuestra, para las ñ, acentos y demás -->
+		<title></title> <!-- para el titulo de l pagina -->
+		
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<form method="POST" action="kkdelavaca.html">
+			<label for="nombre">Nombre: </label><input type="text" name="nombre" /><br/>
+			<label for="apellidos">Apellidos: </label><input type="text" name="apellidos" /><br/>
+			<label for="contrasena">Contraseña: </label><input type="password" name="contrasena" /><br/>
+			<label for="hijos">Hijos: </label><input type="checkbox" name="hijos" /><br/>
+			<label for="estadocivil">Estado civil: </label><br/>
+				<input type="radio" name="estadocivil" value="Soltero"/>Soltero<br/>
+				<input type="radio" name="estadocivil" value="Casado"/>Casado<br/>
+				<input type="radio" name="estadocivil" value="Divorciado"/>Divorciado<br/>
+				<input type="radio" name="estadocivil" value="Viudo"/>Viudo<br/>
+			<label for="provincia">Provincia: </label>
+				<select name="provincia">
+					<option value="Barcelona">Barcelona</option>
+					<option value="Tarragona">Tarragona</option>
+					<option value="Lleida">Lleida</option>
+					<option value="Girona">Girona</option>
+				</select><br/>
+			<label for="consulta">Consulta: </label><br/>
+				<textarea name="consulta"></textarea><br/>
+			<input type="submit" value="Enviar" />
+			<input type="reset" value="Borrar" />
+			
+		</form>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica </title>
+		<script>
+		var cronometro;
+		var numero_inicial=10;
+		
+			function reloj(){
+				cronometro=setInterval("bajar_tiempo()",100);
+			}
+			
+			function bajar_tiempo(){
+				numero_inicial=numero_inicial.toFixed(1);
+				document.getElementById("mensaje").innerHTML=numero_inicial;
+				numero_inicial=numero_inicial-0.1;
+				if(numero_inicial<0){
+					numero_inicial=10;
+					clearInterval(cronometro);
+				}
+			}
+			
+			function parar(){
+				clearInterval(cronometro);	
+			}
+		</script>
+	</head>
+	<body onload="reloj();" style="background-color:black;">
+		<div style="width:400px; margin:auto; margin-top:300px;"><p id="mensaje" style="color:white; display:block; border-style:solid;border-width:5px;border-color:#EF9CA0; width:200px; height:200px; font-size:3em; text-align:center; margin:auto; margin-bottom:10px;"></p>
+		<div style="margin:auto; width:300px;"><button onclick="reloj();">Iniciar</button>
+		<button onclick="parar();">Parar</button></div></div>
+	</body>
+</html>

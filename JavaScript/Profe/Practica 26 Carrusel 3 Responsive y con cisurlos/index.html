@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8"/>
+  <style>
+	.mostrar{visibility: visible;}
+	.ocultar{visibility: hidden;}
+  </style>
+  <script src="funciones.js"></script>
+</head>
+<body onload="iniciar()" onresize="calcular();">
+	<div id="contenedor" style="position:relative;margin:auto;width:95%;overflow:hidden;height:0px;"><!-- tiene que ser relative para poder hacer las absolutas dent-->
+		<div id="fotoizquierda" style="position:absolute;left:-100%;width:100%;margin:0;padding:0;"><!-- tiene que ser absolute-->
+			<img id="fizquierda" style="width:100%;" alt="" src="img/foto1.jpg" />
+		</div>
+		<div id="fotocentral" style="position:absolute;left:0px;width:100%;margin:0;padding:0;"><!-- tiene que ser absolute-->
+			<img id="fcentral" style="width:100%;" alt="" src="img/foto2.jpg" />
+		</div>
+		<div id="fotoderecha" style="position:absolute;left:100%;width:100%;margin:0;padding:0;"><!-- tiene que ser absolute-->
+			<img id="fderecha" style="width:100%;" alt="" src="img/foto3.jpg" />
+		</div>
+		<div id="flecha_izquierda" class="mostrar" style="display:block;position:absolute;left:0px;width:5%;top:0px;">
+			<img id="flechaI" onclick="izquierda();" style="width:100%;" src="img/flecha_izquierda.png">
+		</div>
+		<div id="flecha_derecha" class="mostrar" style="display:block;position:absolute;left:95%;width:5%;top:0px;">
+			<img id="flechaD" onclick="derecha();" style="width:100%;" src="img/flecha_derecha.png">
+		</div>
+		<div id="circulos" class="mostrar" style="display:block;position:absolute;left:0%;width:30%;top:0px;margin:auto;">
+			<img id="circuloI" onclick="cambiar_foto(1);" style="float:left;margin:5px;cursor:pointer;" src="img/activo.png">
+			<img id="circuloC" onclick="cambiar_foto(2);" style="float:left;margin:5px;cursor:pointer;" src="img/inactivo.png">
+			<img id="circuloD" onclick="cambiar_foto(3);" style="float:left;margin:5px;cursor:pointer;" src="img/inactivo.png">
+		</div>
+	</div>		
+</body>
+</html>

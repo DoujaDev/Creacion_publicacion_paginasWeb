@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<script>
+			var sueldo=0;
+			var horas=parseFloat(prompt("Introduce las horas trabajadas"),10);
+			var precio=parseFloat(prompt("Introduce el precio hora"),10);
+			
+			if (isNaN(horas)) 
+				{
+				alert ("Las horas introducidas son incorrectas");
+				}
+				else if(isNaN(precio))
+					{
+					alert ("El precio introducido es incorrecto");
+					}
+					else
+					{
+						if (horas>35)
+						{
+							//Calculamos cuando tiene horas extras
+							sueldo=35*precio+(horas-35)*precio*1.5;
+						}
+						else
+						{
+							//Calculamos cuando sin horas extras
+							sueldo=horas*precio;
+						}
+						alert("Tu sueldo es "+sueldo+" €");	
+					}
+		</script>
+	</head>
+	<body>
+	
+
+	
+	</body>
+</html>

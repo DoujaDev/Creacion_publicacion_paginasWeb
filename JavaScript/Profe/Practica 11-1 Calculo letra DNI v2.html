@@ -1,0 +1,27 @@
+<!-- Comprobar que la letra indicada corresponde al numero de DNI indicado -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title></title>
+    <script type="text/javascript">
+		var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+		var numero=parseInt(prompt("Introduce tu numero de DNI"),10);
+		var letra=prompt("Introduce tu letra del DNI");
+		var calculo=numero % 23;
+		
+		if (letra.toUpperCase()==letras[calculo])
+		{
+			document.write("EL DNI es correcto");
+		}
+		else
+		{
+			document.write("EL DNI es incorrecto");
+		}
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>

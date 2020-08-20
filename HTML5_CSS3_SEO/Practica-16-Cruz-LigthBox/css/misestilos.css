@@ -1,0 +1,38 @@
+body {
+     background-color:black;
+     color:white;
+}
+ .caja {
+     background-color:white;
+     width:233px;
+     padding:25px;
+}
+ .bordesredondeados4 {
+     border-radius: 10px 10px 10px 10px;
+     -moz-border-radius: 10px 10px 10px 10px;
+     -webkit-border-radius: 10px 10px 10px 10px;
+}
+ .bordesredondeados2arriba {
+     border-radius: 10px 10px 0px 0px;
+     -moz-border-radius: 10px 10px 0px 0px;
+     -webkit-border-radius: 10px 10px 0px 0px;
+}
+ .quitarabajo {
+     padding-bottom:0px;
+}
+ .quitarderechaizquierda {
+     padding-left:0px;
+     padding-right:0px;
+}
+ .cajagrande {
+     width:799px;
+}
+ .centrar {
+     margin:auto;
+}
+ img {
+     width:100%;
+}
+ .flotar {
+     float:left;
+}

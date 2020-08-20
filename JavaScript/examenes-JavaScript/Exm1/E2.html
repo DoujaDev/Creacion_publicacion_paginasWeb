@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>R2 </title>
+		<script>
+			var numero=parseInt(prompt("Introduce un número"),10); // para que el usuario introduce el número que desea calcular su factorial
+			if(isNaN(numero)){// controlamos los errores, en este caso si el usuario introduce algo que no sea número le informamos que la información introducida es incorrecta
+				document.write("Introduce un número correcto");
+			}
+			else{
+			var factorial=1;
+			// si es correcto calculamos la factorial del numero introducido con un bucle FOR
+				for(var i=1;i<=numero;i++){
+					factorial*=i; // cada vez que entramos multiplicamos la factorial por i y guardamos el resultado en la variable factorial
+				}
+				// mostramos en pantalla el resultado, que es la factorial del numero introducido 
+				document.write("El resultado del factorial del numero "+numero+" es "+factorial);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

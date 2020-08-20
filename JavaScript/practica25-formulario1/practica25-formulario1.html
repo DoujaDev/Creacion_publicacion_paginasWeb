@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario</title>
+		<link href="css/formulario1.css" rel="stylesheet" type="text/css" />
+		<script src="js/formValidation.js"></script>	
+	</head>
+	<body onload="iniciar();">
+		<form id="datos" method="POST" action="#" onreset="iniciar();">
+			<div class="label"><label for="nombre">Nombre</label></div><div><input onkeyup="validar(this.id);" type="text" name="nombre" id="nombre" /></div><div><p id="ayuda_nombre"></p></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="casado">Casado/a</label></div><div><input onchange="mostrar();" type="checkbox" style="margin-top:24px;" name="casado" id="Casado"/></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="conyugue" id="labelConyugue">Nombre cónyugue</label></div><div><input onkeyup="validar(this.id);" type="text" name="conyugue" id="conyugue"/></div></div><div><p id="ayuda_conyugue"></p></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="hijos">Hijos: </label></div>
+			<div><input onchange="mostrar();" style="margin-top:23px;" type="radio" name="hijos" id="si" value="si"/>Sí<br/></div>
+			<div><input onchange="mostrar();" style="margin-top:23px;" type="radio" name="hijos" id="no" value="no"/>No</div>
+			<div class="borrar"></div>
+			<div class="label"><label for="numeroHijos" id="labelNumeroHijos" >Número Hijos: </label></div><div><input onchange="anadirHijo();" style="width:80px;" min="1" type="number" name="hijos" id="numeroHijos"/></div><div><p id="ayuda_edad"></p></div>
+			<div class="borrar"></div>
+			<div id="CajaMadre"></div>
+			<div class="borrar"></div>
+			<div class="media"><input onclick="validar();" type="submit" value="Enviar" /></div>
+			<div class="media"><input type="reset" value="Borrar" /></div>
+			
+		</form>
+	</body>
+</html>

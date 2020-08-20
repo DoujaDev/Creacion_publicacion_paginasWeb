@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Cambio de color de fondo de la web cada X tiempo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>DOM getElementsByTagName</title>
+	
+    <script type="text/javascript">	
+		function cambiar()
+		{
+			document.getElementsByTagName("p")[0].innerHTML="Perico";
+			document.getElementsByTagName("p")[1].innerHTML="de los";
+			document.getElementsByTagName("p")[2].innerHTML="Palotes";
+		}
+	</script>
+</head>
+<body>
+	<p>Hola</p>
+	<p>estoy en clase de</p>
+	<p>Javascript</p>
+	<br/>
+	<span onclick="cambiar()" style="background-color:lightgray;padding:20px;border:1px solid gray;cursor:pointer;">Cambiar</span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio1 </title>
+		<script>
+		var paga;
+			var horas=parseInt(prompt("Introduce el número de horas trabajadas"),10 ); // para que usuario pueda introducir el número de horas que ha trabajado una persona
+			var precio=parseInt(prompt("Introduce el precio por hora"),10 ); // para que el usuario pueda introducir el precio de una hora
+			if(isNaN(horas)){ // controlamos los errores, en este caso si el usuario introduce algo que no sea número le informamos que la información introducida es incorrecta
+				document.write("Introduce un número de horas correcto");
+			} 
+			else if(isNaN(precio)){
+				document.write("Introduce un precio correcto");
+			}
+			// si el usuario ha introducido números correctos calculamos su salario bruto
+			else{
+				if(horas<=35){ // si la persona ha trabajado 35 horas sin horas extras
+					paga=horas*precio;
+				}
+				else{ // si la persona ha trabajado horas extras
+					paga=(35*precio)+(horas-35)*precio*1.5;
+				}
+				// mostramos en pantalla el resultado, el salario bruto de la persona
+			document.write("El salario bruto para una persona que ha trabajado "+horas+" horas, a un precio por hora de "+precio+" es "+paga+"€");
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

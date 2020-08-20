@@ -1,0 +1,50 @@
+.container
+{	
+	background-color:#D7DBDD;
+	margin:auto;
+	width:900px;
+	overflow:hidden;
+}
+.fondo
+{
+	background-color:black;
+	margin:0px;
+	padding:0px;
+	font-family:calibri;
+}
+.cajainterior
+{
+	margin:20px 30px 0px 30px;
+	width:840px;
+	overflow:hidden;
+}
+.foto310
+{
+	width:310px;		
+}
+.foto200
+{
+	width:200px;		
+}
+
+.texto500
+{
+	width:500px;
+	text-align:justify;
+	font-size:18px;
+}
+.menu
+{
+	width:610px;
+	text-align:justify;
+	font-size:18px;
+	height:50px;
+}
+.izquierda
+{
+	float:left;
+}
+.derecha
+{
+	float:right;
+}

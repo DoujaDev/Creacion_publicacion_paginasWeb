@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica </title>
+		<script>
+			function encender(){
+				document.getElementById("bombillo").src="turn-on.png"
+			}
+			
+			function apagar(){
+				document.getElementById("bombillo").src="turn-off.png"
+			}
+		</script>
+	</head>
+	<body>
+	<img id="bombillo" style="width:20%;" src="turn-off.png" />
+	<button onclick="encender();">turn on</button>
+	<button onclick="apagar();">turn off</button>
+	</body>
+</html>

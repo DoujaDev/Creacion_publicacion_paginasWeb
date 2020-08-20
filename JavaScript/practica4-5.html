@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 4.5</title>
+		<script>
+		var paga=0;
+		var horas=parseInt(prompt("Introduce las horas"),10);
+		var precio=parseInt(prompt("Introduce el precio por hora"),10);
+		if(isNaN(horas)){
+			alert("Las horas introducidas son incorrectas");
+		}
+		else if(isNaN(precio)){
+			alert("El precio introducido es incorrecto");
+		}
+		else{
+			if(horas<=35){
+				paga=horas*precio;
+			}
+			else{
+				var pagaEx=precio+(precio*0.5);
+				paga=(35*precio)+((horas-35)*pagaEx);
+			}
+			alert("tu paga es "+paga);
+		}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

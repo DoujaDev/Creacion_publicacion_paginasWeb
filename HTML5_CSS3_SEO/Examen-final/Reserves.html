@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"> 
+	<title>Reserves| Examen</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+		<!-- los cuatro estilos css para el global, el ordenador , el móvil y la Tablet --> 
+		<link href="css/estilos-movil.css" rel="stylesheet" type="text/css" media="(max-width: 510px)" />
+		<link href="css/estilos-pc.css" rel="stylesheet" type="text/css" media="(min-width: 511px)" />
+</head>
+<body> 
+<!-- Incio cabecera -->
+<header>
+<!-- Inicio menu -->
+	<nav>
+		<ul>
+		  <li><a href="index.html">Inicio</a></li>
+		  <li><a href="servicios.html">Servicios</a></li>
+		  <li><a href="reservas.html">Reservas</a></li>
+		  <li><a href="contactar.html">Contacto</a></li>
+		</ul>
+	</nav>
+<!-- Fin menu -->
+</header>
+<!-- Fin cabecera -->
+	<!-- Inicio del bloque central -->
+	<div class="container">
+		<div>
+		<!-- El título -->
+		<h2 class="titulo">Reservas</h2>
+		<!-- Incio del parrafo -->
+		<p>
+		Por favor, rellena el siguiente formulario para realizar tu reserva.Recuerda rellenar todos los campos.<br/>
+		Si tienes alguna duda o deseas más infornación pulsa el botón "realizar consulta", te contestaremos con la mayor brevedad.<br/>
+		MUY IMPORTANTE:las consultas realizadas NO son reservas, no se enviará ninguna confirmación de la misma y no podremos atender su petición en el caso de estar la sala completa.</p>
+		<!-- Fin del parrafo -->
+		</div>
+		<!--Inicio Formulario -->
+		<div class="Formulario">
+			<form method="POST" action="envio.php">
+					<label for="nombre">Nombre de la reserva: </label><div><input type="text" name="nombre" id="nombre" required="required" placeholder="Introduzca su nombre ..." autofocus="autofocus" oninvalid="setCustomValidity('Este campo es obligatorio.Por favor introduzca su nombre')" oninput="setCustomValidity('')" /></div>
+					<div class="borrar"></div>
+					<label for="telefono">Teléfono: </label><div><input type="text" name="telefono" required="required" id="telefono" pattern="[0-9]{9}" placeholder="Introduzca su teléfono ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, introduzca 9 dígitos ')" oninput="setCustomValidity('')" /></div>
+					<div class="borrar"></div>
+					<label for="email">Correo: </label><div><input type="email" id="email" name="email" required="required" placeholder="Introduzca su correo electrónico ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, imtroduzca su correo electrónico')" oninput="setCustomValidity('')"/></div>
+					<div class="borrar"></div>
+					<label for="caja">Franja horária: </label>
+					<div>	
+						<input type="text" list="franja" name="franja" required="required" id="caja"  placeholder="Seleccione una categoría ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor,Seleccione una categoría ')" oninput="setCustomValidity('')" />
+						<datalist id="franja">
+							<option value="Desayono">
+							<option value="Almuerzo">
+							<option value="Cena">
+						</datalist>
+					</div> 
+					<div class="borrar"></div>
+					<label for="horainicio">Hora:</label>
+					<div><input type="time" name="horainicio" id="horainicio" required="required" oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca la hora de incio del evento')" oninput="setCustomValidity('')"/></div>
+					<div class="borrar"></div>
+					<label for="asistentes">Asistentes:</label>
+					<div><input type="number" name="asistentes" id="asistentes" required="required" min="0"  oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca el número de asistentes')" oninput="setCustomValidity('')"/></div>
+					<div class="borrar"></div>
+					<label for="comentario">Comentarios:</label>
+					<div><textarea name="comentario" id="comentario" rows="6" placeholder="Tu comentario ..."></textarea></div>
+			<div class="borrar"></div>
+			<div id="boton">
+				<button type="submit" value="Enviar"><img src="imagenes/enviar.png" alt="enviar" title="enviar" /></button>
+				<button type="reset" value="Borrar"><img src="imagenes/vaciar.png" alt="vaciar" title="vaciar" /></button>
+			</div>
+			</form>
+		</div>	
+	<!-- Fin formulario -->
+	</div>
+	<!-- Fin del bloque central -->
+</body>
+</html>

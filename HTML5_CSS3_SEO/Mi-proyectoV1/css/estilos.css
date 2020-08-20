@@ -1,0 +1,129 @@
+/* -------------------------------------------------
+			estilos generales 
+------------------------------------------------- */
+.borrar{
+	clear:both;
+}
+.margintop{
+	margin-top:40px;
+}
+.marginright{
+	margin-right:22px;
+}
+.paddingright{
+	padding-right:50px;
+}
+
+.paddingleft{
+	padding-left:30px;
+}
+
+.floatleft{
+	float:left;
+}
+.floatright{
+	float:right;
+}
+
+.fondo{
+	margin:0px;
+	padding:0px;
+	font-family:calibri;
+}
+
+.todo{
+	width:100%;
+	overflow:hidden;
+}
+
+.total{
+	width:100%;
+}
+
+.media{
+	width:50%;
+}
+
+.colorblue{
+	background-color:#f0f5f5;
+}
+
+.marginzero{
+	padding:0px;
+}
+
+/* -------------------------------------------------
+			estilos  header-top
+------------------------------------------------- */
+
+.idiomas{
+	text-align:right;
+}
+
+li {
+     
+     padding-left:3px;
+     padding-right:3px;
+}
+
+
+/* -------------------------------------------------
+			estilos  container
+------------------------------------------------- */
+.container{
+	margin:auto;
+	width:80%;
+	overflow:hidden;
+	/* background-color:black; */
+}
+
+.logo{
+	width:35%;
+	height:150px;
+}
+
+.compra{
+	width:50%;
+	text-align:right;
+}
+
+.descripciontemp{
+	background-image:url("../images/incio/fondo-banner.png");
+	width:100%;
+}
+
+.containerfotos{
+	width:100%;
+	margin-top:100px;
+	overflow:hidden;
+	
+}
+
+.ingsecondas{
+	height:300px;
+}
+
+
+
+.parrafo{
+  display: block;
+  font-family: 'Signika', sans-serif;
+  padding:20px;
+  margin:0px;
+  text-align:justify;
+  font-size:25px;
+  color:#32331e;
+}
+
+.titledescrpcion{ 
+  display: block;
+  font-size:25px;
+  margin:0px;
+  color:#32331e;
+  font-family: 'Signika', sans-serif;
+}
+
+
+
+
+

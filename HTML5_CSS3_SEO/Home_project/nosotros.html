@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"> 
+	<title>Nosotros| FashionDay</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+		<!-- los cuatro estilos css para el global, el ordenador , el móvil y la Tablet --> 
+		<link href="css/global.css" rel="stylesheet" type="text/css" />
+		<link href="css/estilos-movil.css" rel="stylesheet" type="text/css" media="(max-width: 510px)" />
+		<link href="css/estilos-pc.css" rel="stylesheet" type="text/css" media="(min-width: 1050px)" />
+		<link href="css/estilos-tablet.css" rel="stylesheet" type="text/css" media="(min-width:511px) AND (max-width: 1049px)"/>
+		<link href="css/formulario1.css" rel="stylesheet" type="text/css" />
+	
+		<!-- Fuentes de Google Fonts --> 
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+<body class="fondo"> <!-- la clase fondo es para poner los margines a 0 -->
+	<header class="todo relativa top-container"><!-- la capa que contiene la parte superior de la página, es relativa y lleva todas las otras capas encima esto significa que todas las capas que están dentro de la capa top-container son absolutas y tiene una posición propia -->
+		<!-- la imagen principal que sale en la parte superior de la página que ocupa todo el ancho --> 
+		<div class="todo"><img class="todo" src="images/general/nosotros.jpg" alt="photo principal" title="photo principal"/></div>
+		<!-- capa que da un tono oscuro al menu y la capa de idiomas -->
+		<div class=" todo color-top absoluta"></div> 
+		<!-- capa de idiomas donde puedes elegir entre en el inglés y el castellano -->	
+		<div class="idiomas absoluta"> 
+				<!-- el icon tierra -->
+				<img class="floatleft paddingright-movil" src="images/general/icon-earth.png" alt="idiomas" title="idiomas"/>
+				<div class="floatleft"><a class="link font1 white" href="#">Español</a></div>
+				<!-- línea vertical entre los dos idiomas -->
+				<div class="vl floatleft"></div>
+				<div class="floatleft"><a class="link font1 white" href="#">English</a></div>
+						
+		</div>
+		<!-- el Menu versión PC-->
+		<nav class="menu floatright absoluta">
+				<ul>
+					<li class="home"><a href="index.html"><span>Inicio</span></a></li>
+					<li class="tutorials"><a href="nosotros.html"><span>Nosotros</span></a></li>
+					<li class="about"><a href="vestidos.html"><span>Vestidos</span></a></li>
+					<li class="about"><a href="contacto.html"><span>Contacto</span></a></li>
+				</ul>
+		</nav>
+		<!-- el Menu versión móvil y Tablet que es menu Menú desplegable lateral -->
+		<nav class="menumovil absoluta">
+			<input type="checkbox" class="checkbox" id="menu-toogle"/>
+			<label for="menu-toogle" class="menu-toogle"></label>
+			<nav class="nav">
+			  <a href="index.html" class="nav__item current">Inicio</a>
+			  <a href="nosotros.html" class="nav__item">Nosotros</a>
+			  <a href="vestidos.html" class="nav__item">Vestidos</a>
+			  <a href="contacto.html" class="nav__item">Contacto</a>
+			</nav>
+		</nav>
+	</header>
+
+
+	<div class="container">
+		<section class="presentacion">
+			<div class="centrar paddingtop"><h4 class="title  greenblue centrar-texto">Nosotros</h4></div>
+			<div class="linea centrar"></div>
+			<div class="todo cuadroprimavera">
+				<div class=" media-foto floatright">
+					<img class="foto-round-right todo" src="images/general/catering2.jpg" alt="Primavera" title="Primavera"/>
+				</div>
+				<div class=" media-primavera floatleft">
+					<h2 class="title-primavera todo">SERVICIOS</h2>
+					<p class="parrafo-primavera todo">Ofrecemos servicio catering desde grupos reducidos a grandes grupos, paellas, fideuas, pica pica, coffe breaks, comidas empresa, colegios.Ofrecemos un servicio de calidad con productos de confianza.</p>
+				</div>
+			</div>
+			<div class="borrar"></div>
+			<!-- capa 2  esta capa tiene el orden de la foto y el texto invertido-->
+			<div class="todo cuadroprimavera ">
+				<div class=" media-foto todo floatleft ">
+					<img class=" foto-round-left todo" src="images/general/catering1.jpg" alt="Primavera" title="Primavera"/>
+				</div>
+				<div class=" media-primavera floatright">
+					<h2 class="title-primavera todo">FashionDay</h2>
+					<p class="parrafo-primavera todo">En nuestra empresa destacamos por nuestra adaptación a las necesidades de cada cliente. Equipo de profesionales atento, agradable y siempre pendiente del detalle para asegurar el éxito del evento.</p>
+				</div>
+
+			</div>
+			<div class="borrar"></div>
+			<!-- capa 3 -->
+			<div class="todo cuadroprimavera ">
+				<div class=" media-foto floatright">
+					<img class=" foto-round-right todo" src="images/general/catering3.jpg" alt="Primavera" title="Primavera"/>
+				</div>
+				<div class=" media-primavera floatleft">
+					<h2 class="title-primavera">LO QUE NOS GUSTA</h2>
+					<p class="parrafo-primavera todo ">Nuestra capacidad de reacción es ágil, personal, agradable, centrándonos en la elaboración de nuestros platos y cuidando su presentación.</p>
+				</div>
+			</div>
+		</section>
+		<div class="borrar"></div>
+		<section class="nosotros over">
+			<div class="centrar paddingtop"><h4 class="title  greenblue centrar-texto">¿Qué ventajas te ofrecemos? </h4></div>
+					<div class="linea centrar"></div>
+					
+			<div class="parrafo-nosotros">
+				<p>En Servicos organizamos servicios de catering en Barcelona para el evento que tenga en mente. No te preocupes por nada, es su evento, disfrútelo, nosotros haremos el resto. Olvidarse por completo del tiempo de trabajo. </p>
+			</div>
+			<div class="entre-parrafo">&nbsp</div>
+			<div class="parrafo-nosotros">
+				<p>Las empresas de catering presentan diferentes alternativas para alcanzar la atmósfera que más guste. También puede elegir el estilo de montaje hasta la selección de copas o platos, pasando por manteles y cubertería.</p>
+			</div>
+			<div class="entre-parrafo">&nbsp</div>
+			<div class="parrafo-nosotros">
+				<p>El cliente será quien dé la orden de salida de toda la comida, cuando se considere oportuno es siempre el cliente quien elegirá cuando se da ese paso. Evitando así servir comida fría o con mala presentación.</p>
+			</div>
+		</section>
+
+
+	</div>
+	<div class="borrar"></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<footer class="footer  gray over"> <!-- el pie de la página que está compuesto de columnas cada una lleva un título y subtítulos -->
+	
+		<div class="columna floatleft">
+			<h4>FashionDay</h4>
+			<p><a href="nosotros.html" title="Nosotros">Nosotros</a></p>
+			<p><a href="aviso-legal.html" title="Aviso Legal">Aviso Legal</a></p>
+			<p><a href="metodos-pago.html" title="Métodos de pago">Métodos de pago</a></p>
+			<p><a href="politicas-envio.html" title="políticas de envío">políticas de envío</a></p>
+		</div>
+		<div class="columna floatleft columnamovil">
+			<h4>Servicios</h4>
+				<p><a href="novedades.html" title="Novedades">Novedades</a></p>
+				<p><a href="sugerencias.html" title="Sugerencias">Sugerencias</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Devolución</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Cambio</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Regalos</a></p>					
+		</div>
+		<!-- la clase borrarpie y linea-movil son activas en las versiones móvil y Tablet es para tener una presentación diferente -->
+		<div class="borrarpie"></div> 
+		<div class="linea-movil linea-tablet"><hr></div>
+		<div class="columna floatleft">
+			<h4>Categorías</h4>	
+			<p><a href="ropa.html" title="ropa">ropa</a></p>
+			<p><a href="vestidos.html" title="vestidos">vestidos</a></p>
+			<p><a href="Accesorios.html" title="Accesorios">Accesorios</a></p>
+			<p><a href="Calzado.html" title="Calzado">Calzado</a></p>	
+		</div>
+		<div class=" floatleft columna columnamovil">
+			<h4>Marcas</h4>
+			<p><a href="refka.html" title="Refka">Refka</a></p>
+			<p><a href="benin.html" title="Benin">Benin</a></p>
+			<p><a href="alia.html" title="Alia">Alia</a></p>
+			<p><a href="tavin.html" title="Tavin">Tavin</a></p>
+		</div>
+		<div class="borrarpie"></div>
+		<div class="linea-movil linea-tablet"><hr></div>
+		<!-- esta capa contiene los contactos: redes sociales, número de teléfono y dirección mail -->
+		<div class="footer-social over">
+			<div>
+				<h4>FOLLOW US</h4>
+				<a href="#" title="Facebook"><img src="images/general/Facebook.png" alt="Facebook" title="Facebook"/></a>
+				<a href="#" title="Instagram"><img src="images/general/Instagram.png" alt="Instagram" title="Instagram"/></a>
+				<a href="#" title="Youtube"><img src="images/general/Youtube.png" alt="Youtube" title="Youtube"/></a>   
+			</div>
+			<div>
+				<h4>CONTACT US</h4>
+				<div class="floatleft"><a href="+34650788557"><img src="images/general/phone.png" alt="telefono" title="telefono"  /></a></div>
+				<div class="floatleft"><a class="link colortext" href="+34650788557"> 650 78 85 57</a></div>
+					<div class="borrar"></div>
+				<div class="floatleft	"><a href="FashionDay@inform.com"><img src="images/general/email.png" alt="email" title="email"/></a></div>
+				<div class="email"><a class="link colortext" href="FashionDay@inform.com">FashionDay@gmail.com</a></div>  
+			</div>
+		 </div>	
+	</footer>
+</body>
+</html>

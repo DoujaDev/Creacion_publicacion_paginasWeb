@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<script>
+			var texto = ["lunes","martes","miércoles","jueves","viernes"];
+			function mostrar(){
+					document.getElementById("mensaje").innerHTML = texto;
+					/*for(var c in texto){	
+						document.write(texto[c]+" ");
+					}*/
+			}
+			
+			function anadir(){
+				var palabra= prompt("Introduce el texto que añadir ");
+				texto.push(palabra);
+				document.getElementById("mensaje").innerHTML = texto;
+			}
+			
+			function eliminar(){
+				var palabra= prompt("Introduce el texto que eliminar ");
+				var index=texto.indexOf(palabra);
+				if(index == -1){
+					document.getElementById("mensaje").innerHTML = "El texto no existe";
+				}else{
+					texto.splice(index,1);
+					document.getElementById("mensaje").innerHTML = texto;
+				}
+				
+			}
+			function buscar(){
+				var palabra= prompt("Introduce el texto que buscar ");
+				var index=texto.indexOf(palabra);
+				if(index == -1){
+					document.getElementById("mensaje").innerHTML = "El texto no existe";
+				}else{
+					document.getElementById("mensaje").innerHTML = "El indice de "+palabra+" es: "+index;
+				}
+			}
+		</script>
+		<style>
+			p{color:green;font-size:2em;cursor: pointer;}
+		</style>
+	</head>
+	<body>
+	<p onclick="mostrar();">Mostrar</p>
+	<p onclick="anadir();">Añadir</p>
+	<p onclick="eliminar();">Eliminar</p>
+	<p onclick="buscar();">Buscar</p>
+	
+	<p id="mensaje">Aquí se mostrarán los resultados</p>
+	</body>
+</html>
+

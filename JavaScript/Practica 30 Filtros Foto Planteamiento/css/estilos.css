@@ -1,0 +1,56 @@
+.contenedor
+{
+	width:810px;
+	margin:auto;
+	
+}
+.contenedor div
+{
+	width:200px;
+	height:200px;
+	float:left;
+	margin:0px 1px 1px 1px;
+	text-align:center;
+	position:relative;
+	
+}
+.contenedor img
+{
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	
+	
+}
+.selector
+{
+	width:810px;
+	margin:auto;
+	font-size:20px;
+	
+}
+.selector div
+{
+	width:15%;
+	float:left;
+	text-align:center;
+}
+
+.claro{
+	opacity: 0.9;
+	filter: alpha(opacity=50);
+}
+.oscuro{
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	transition: .5s ease;
+	z-index:200;
+	background-color:black;
+	position:absolute;
+	left:0;
+	top:0;
+	text-align:center;
+	font-size:1.5em;
+	
+}

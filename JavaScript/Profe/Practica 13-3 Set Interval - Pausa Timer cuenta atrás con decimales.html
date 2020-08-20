@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Cambio de color de fondo de la web cada X tiempo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Timer</title>
+	<style>
+		.modo_diurno
+		{
+			color:black;
+			background-color:white;
+		}
+		.modo_nocturno
+		{
+			color:white;
+			background-color:black;
+		}
+		.borde_nocturno
+		{
+			border:3px white solid;
+		}
+		.borde_diurno
+		{
+			border:3px black solid;
+		}
+	</style>
+    <script type="text/javascript">
+		var cronometro;
+		var numero_inicial=10;
+		var modo="diurno";
+		function reloj()
+		{
+			if(document.getElementById("boton").innerHTML=="Iniciar")
+			{
+				document.getElementById("boton").innerHTML="Pausar";
+				clearInterval(cronometro);
+				numero_inicial=10;
+				cronometro=setInterval("bajar_tiempo()",100);
+			}
+			else if(document.getElementById("boton").innerHTML=="Pausar")
+				{
+					document.getElementById("boton").innerHTML="Continuar";
+					clearInterval(cronometro);
+				}
+				else if(document.getElementById("boton").innerHTML=="Continuar")
+				{
+					document.getElementById("boton").innerHTML="Pausar";
+					cronometro=setInterval("bajar_tiempo()",100);
+				}
+			
+			
+		}
+		function bajar_tiempo()
+		{
+			
+			numero_inicial=numero_inicial.toFixed(1);
+			document.getElementById("mensaje").innerHTML=numero_inicial;
+			
+			numero_inicial=numero_inicial-0.1;
+			if(numero_inicial<0)
+			{
+			document.getElementById("boton").innerHTML="Iniciar";
+			clearInterval(cronometro);
+			}
+		}
+		function cambiar_modo()
+		{
+			if(modo=="diurno")
+			{
+				document.body.className="modo_nocturno";
+				document.getElementById("mensaje").className="borde_nocturno";
+				modo="nocturno";
+			}
+			else
+			{
+				document.body.className="modo_diurno";
+				document.getElementById("mensaje").className="borde_diurno";
+				modo="diurno";
+			}
+		
+		}
+	</script>
+</head>
+<body class="modo_diurno" style="text-align:center;">
+	<p onmouseover="cambiar_modo()" id="mensaje" class="borde_diurno" style="font-size:300px;margin:30px;">10.0</p>
+	<button id="boton" onclick="reloj();">Iniciar</button>
+</body>
+</html>

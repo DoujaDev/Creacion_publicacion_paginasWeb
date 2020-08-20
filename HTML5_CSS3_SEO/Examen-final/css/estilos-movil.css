@@ -1,0 +1,171 @@
+/* -------------------------------------------------
+			Estilos  general
+------------------------------------------------- */
+body {
+	font-family:arial; /* tipo de letra de la página es Arial */
+	color:#A6353B; /* el color de la letra general */
+	background-image:url("../imagenes/fondo.gif"); /* el fondo de la página */
+	margin:0; /* eliminamos los paddings y márgenes de la página */
+	padding:0;
+
+}
+/* -------------------------------------------------
+			Estilos  Menu
+------------------------------------------------- */
+nav{ /* la capa que contiene el menu */
+	background-color:#EF9CA0; /* el color de fondo del menu */
+	margin-bottom:10px; /* la separación con el bloc inferior */
+}
+
+ul { /* eliminamos el estilo por defecto de la lista */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  top: 0;
+}
+
+li { 
+  float: left; /* todos los elementos del menu flotan a la izquierda */
+  display: block;
+   width:50%; /*  cambiamos el ancho para que los elementos del menu se vean en dos columnas */
+  
+}
+
+li a {
+  display: block; /* cada a se comporta como un bloque */
+  color:#FDE4E5; /* el color de la letra del menu */
+  text-align: center;  /* para centrar el texto en el menu */
+  padding: 14px 16px; /* cada elemento tiene un padding */
+  margin:3%; /* el margin de cada elemento del menu */
+  text-decoration:none; /* eliminamos el subrayado de los vínculos */
+  font-size:1.8em; /* el tamaño de la letra del menu */
+ 
+}
+
+li a:hover { /* para cambiar el color de la letra cuando el elemento recibe el focus */
+  color: #A6353B;
+}
+
+/* -------------------------------------------------
+			Estilos  bloque central
+------------------------------------------------- */
+
+.container{
+	width:95%; /* el bloque central ocupa el 95% de la página */
+	background-color:#FDE4E5; /* el color del fondo del bloque central */
+	padding:1%; /* damos un márgen interno al bloque central */
+	color:#A6353B; /* el color de la letra en el bloque */
+	margin:auto; /* para pober el bloque en el centro de la página */
+	border-style:solid; /* para definir el contorno del bloque  */
+	border-width: 5px; /* la medida del border del bloque */ 
+	border-color:#EF9CA0; /* el color del border del bloque */
+	overflow:hidden;
+	/* definimos el contorno redondo  a 10px para los diferentes tipos de navegadores */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	
+}
+
+.titulo{
+	font-size:2.5em;  /* el tamaño la letra del título */
+	text-align:center; /* para centrar el título */
+}
+p{
+	text-align:center; /* para centrar el párrafo */
+	font-size:1em; /* el tamaño de la letra del párrafo en el bloque */
+}
+
+/* -------------------------------------------------
+			Estilos  Formulario
+------------------------------------------------- */
+
+
+.borrar{
+	clear:both;
+	margin:0;
+}
+
+form{ /* el formulario que ocupa todo el bloque central */
+	width:100%;
+}
+
+label{
+	font-weight:bold; /* la etiquetas están en negrita */
+	font-size:1em; /*  el tamaño del las etiquetas en el formulario */
+	float:none; /* eliminamos la flotación del elemento */
+	display:block; /* para que se comporte como un bloque */
+	margin-top:20px; /* la separación superior  */
+	width:100%; /* le damos un ancho de 100% en la versión móvil */
+	text-align:center; /*  para centrar las etiquetas */ 
+}
+
+input{
+  width:100%; /* las cajas miden 100% de su ele,emto padre */
+  padding:2% 0; /* especificamos el padding de los campos */
+  margin-top:20px; /* la separación entre campos del formulario */
+  font-size:1em; /* el tamaño de la letra dentro de los campos del formulario */
+  border-color:#EF9CA0; /* el color del border  de los campos */ 
+  border-width:2px; /* la medida del border de los campos */ 
+  /* definimos el contorno redondo a 10px para los diferentes tipos de navegadores */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+}
+
+
+button{
+  width:100px; /* los botones miden 100px de ancho */
+  outline:none;
+  cursor: pointer;
+  border-width:0px; /* eliminamos el border por defecto del elemento button */
+  padding:0%; /* eliminamos el padding por defecto del elemento button */
+  margin:auto; /* para centrar los botones */
+  margin-top:20px;/* la separación de los botones del contenido superior */ 
+}
+
+input[type=number]{
+	display:block; /* para que el elemento se comporte como bloque */
+	float:none; /*  eliminamos la flotación del elemento */
+	margin:auto; /*para centrar el elemento */
+	width:16%; /*  especificamos el ancho del campo number */
+}
+
+input[type=time]{ 
+  width:15%;  /* especificamos el ancho del campo number */
+  display:block; /* para que el elemento se comporte como bloque */
+  margin:auto; /*para centrar el elemento */
+}
+
+textarea{
+  margin-top:20px; /* la separación entre campos del formulario */
+  width:100%; /* el textarea ocupa el 100% de su elemento padre */
+  font-size:14px; /* el tamaño del letra dentro del campo */
+  border-color:#EF9CA0;  /* el color del border  de los campos */ 
+  border-width:2px; /* el tamaño del border del campo textarea */
+  display:block; /* para que el elemento se comporte como bloque */
+  /* definimos el contorno redondo a 10px para los diferentes tipos de navegadores */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+}
+
+#boton{ /* características de la capa que contiene los botones */
+	float:none; /* eliminamos la flotación del elemento */
+	width:50%; /* la capa ocupa el 50% de su elemento padre */
+	margin:auto; /* centramos la capa para tener los botones en el centro */
+	overflow:hidden;
+	padding-left:0.8%;
+}
+img{ /* la imagén ocupa el 100% de los botones */
+	width:100%;
+}
+
+
+
+
+

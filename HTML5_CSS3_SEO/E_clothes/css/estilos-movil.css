@@ -1,0 +1,263 @@
+/* -------------------------------------------------
+			estilos generales 
+------------------------------------------------- */
+
+.media{ /* la media ocupa el ancho 100% en la versión móvil */
+	width:100%;
+	overflow:hidden;
+}
+
+.linea{ /* los títulos están subrayado por una línea */
+	background-image:url("../images/general/linea-color.png");
+	width:41%;
+	min-width:200px;
+	height:15px;
+	margin-bottom:3%;
+}
+
+.paddingright-movil{
+	padding-right:2%;
+}
+
+
+
+/* -------------------------------------------------
+			estilos  header-top
+------------------------------------------------- */
+.color-top{ /* Características de la capa que da un tono oscuro al menu y la capa de idiomas */
+	background-color:black;
+	top:0;left:0;
+	height:12.3%;  /* modificado */
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+
+.idiomas a{
+	font-size:0.7em;
+}
+
+.vl{  /* Características de línea vertical que está entre los dos idiomas */
+	height:20px;                 
+}
+
+.logo{ /* posisión y el tamaño del logo de la página */
+	left:21%;
+	top:11%;
+}
+
+
+.imglogin{ /* la imagen del login como un icono */
+	width:25%;
+	padding-right:6%;
+}
+
+.client a{ /* la palabra login es hipervínculo que lleva a la página login.html */
+	font-size:0.7em;	
+}
+
+.client div:last-child{
+	padding-top:9%;
+}
+
+
+/* -------------------------------------------------
+			estilos  container
+------------------------------------------------- */
+
+
+.container{   /* la capa que contiene el párrafo las fotos de las temporadas */
+	width:95%;
+}
+
+.parrafo{  /* el párrafo que describe las tendencias del año actual */
+  font-size:1.3em;
+  padding:2%;
+}
+.temporada{ /* la capa que define las fotos de las temporadas */
+	margin-top:0;  /* modificado */
+}
+
+.textotemporada{  /* el estilo de los nombres de las temporadas, otono, invierno, primavera, y verano */ 
+	font-size:55px;
+}
+
+/* posiciones del texto dentro de las fotos */
+.posicionotono{
+	top:10%;left:10%;
+}
+
+.posicioninvierno{
+	top:10%;left:52%;	
+}
+
+/* -------------------------------------------------
+			el pie de la página
+------------------------------------------------- */
+
+.footer{ /* Características de la capa que contiene todo el pie */
+	padding: 10% 5% 5% 5%;
+}
+.footer a,p{  /* estilo distinto para los enlaces de  el  pie */
+	margin-bottom:2%;
+}
+.columna{   /*  cada columna contiene un título y sus enlaces */ 
+	width:50%;
+	margin:auto;
+	text-align:center;
+}
+.borrarpie{  /* la clase borrarpie y linea-movil son activas en las versiones móvil y Tablet es para tener una presentación diferente */
+	clear:both;
+}
+
+.linea-movil{  /* esta línea aparece sólo en la versión móvil */
+	display:block;
+}
+ .footer-social > div{ /* Características de la capa contiene los contactos: redes sociales, número de teléfono y dirección mail */
+	padding-left:35%;
+} 
+
+/* -------------------------------------------------
+			la página primavera
+------------------------------------------------- */
+ 
+.parrafo-primavera{  /* el párrafo que describe las tendencias del año actual */
+  font-size:1.3em;
+}
+
+.title-primavera{   /* el estilo de los títulos de los párrafos */
+  font-size:1.6em;       
+  margin:0;
+  padding:1%;
+  text-align:center;
+}
+
+@media(min-width:1200px){
+	.parrafo-primavera{font-size:1.8em;}
+	.title-primavera{font-size:2.2em;}
+	}
+	
+.registro{ /* Características de la capa que contiene un artículo con su información */
+	width:100%;
+}
+
+.img-orden{ /* ponemos un tamaño diferente a las fotos que representan la clasificación de las marcas en la versión móvil*/
+	width:9.5%;
+}
+
+.info-top ul li{ /* ponomos nuestro estilo a la lista que contiene la tres marca más compradas */
+	padding: 0 4%;
+}
+
+
+
+/* -------------------------------------------------
+	el menu la pagina version móvil y tablet
+------------------------------------------------- */
+
+.menu{	/* en la versión tablet y móvil el menú es diferente por eso ocultamos el menú de la versión pc */
+	display:none;
+	
+}
+.menumovil{ /* en la versión tablet y móvil se muestra un Menú desplegable lateral */
+
+	display:block;
+	top:1%;left:1%;
+	z-index:50;
+}
+
+/********************\
+  $Reset ☰
+\********************/
+* {
+  box-sizing:border-box;
+}
+.menumovil a {
+width: 50%;
+height: 40px;
+line-height: 53px;
+border-bottom: 4px solid #ffbb99;
+padding:0px;
+color:black;
+font-size:1em;
+font-weight:solid;
+text-align:center;
+font-family: 'Handlee', cursive;
+text-decoration: none;
+display: block;
+-webkit-transition: .2s all linear;
+-moz-transition: .2s all linear;
+-o-transition: .2s all linear;
+transition: .2s all linear; 
+margin-bottom:4%; 
+}
+
+/********************\
+  $Layout ☰
+\********************/
+
+/*Damos estilos al menú*/
+.nav {
+  position:absolute;
+  width:40%;
+  height:100%;
+  top:0;
+  left:-220px; /*Ocultamos el menú en la parte izquierda para que no se vea a menos que pulsemos sobre la hamburguesa*/
+  padding-top:3%;
+  border-right:4px solid #ffbb99;
+  transition:all .5s ease; /*Damos a la caja del menú una transición para que tenga un desplazamiento suave*/
+  background-color:rgba(237, 237, 237, 1);
+  background:hsla(0, 0%, 93%, 1);
+}
+   /*Estilos de los li del menú*/
+   .nav__item {
+     display:block;
+     width:96%;
+     margin:0 auto;
+     line-height:2;
+     position:relative; /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
+     background-color:transparent; 
+   }
+       /*Damos colocamos el triangulo negro a la pestaña del menú dónde nos encontramos actualmente*/
+
+  /*Estos son los estilos de la hamburguesa del menú que abre y cierra el mismo*/
+  .menu-toogle {
+    position:absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+    width: 18px;
+    line-height:1.1;
+    text-align:center;
+    top:2px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+    left:8px; 
+    border-radius:3px;
+    background-color: #BCA79D;
+    transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
+    z-index:10;
+  }
+    /*Añadimos la haburguesa y le damos unos estilos*/
+    .menu-toogle::before {
+      content:"☰";
+      font-size:18px;
+      color:white;
+    }
+
+/* Le damos unos estilos al contenedor principal*/
+
+/*Estos son los estilos que le dan la funcionalidad al menú*/
+/*El checkbox según esté activado o no hará que el menú aparezca o desaparezca*/
+.checkbox 
+{
+	display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+.checkbox:checked ~ .nav {
+	left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+	position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+}
+.checkbox:checked ~ .main-w {
+	margin-left:200px; /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
+}
+.checkbox:checked ~ .menu-toogle { 
+	top:2px;
+	left:42%;
+	position:fixed; /*Fijamos la hamburgues para que se desplace junto con el menú*/
+}
+
+

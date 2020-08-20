@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es"> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!-- Tabla de codigos nuestra, para las ñ, acentos y demás -->
+	<link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+	<script src="js/funciones.js"></script>
+</head>
+<body onkeyup="filtro_tecla(event);">
+	<div class="selector">
+	<div style="width:30%;margin-left:30px;"><p onclick="filtro('todos')">Todas las categorias</p></div>
+	<div><p onclick="filtro('casa')">cAsas</p></div>
+	<div><p onclick="filtro('coche')">Coches</p></div>
+	<div><p onclick="filtro('persona')">Personas</p></div>
+	<div><p onclick="filtro('comida')">coMida</p></div>
+	</div>
+
+	<div style="clear:both;"></div>
+	<div class="contenedor">
+		<img class="ocultar" id="flecha_d" alt="" src="imagenes/flecha_derecha.png"  onclick="next();" style="display:block;position:absolute;left:1145px;width:5%;top:400px;"/>
+		<img class="ocultar" id="flecha_i" alt="" src="imagenes/flecha_izquierda.png" onclick="prev();" style="display:block;position:absolute;left:50px;width:5%;top:400px;"/>
+		<div class="ocultar" id="caja_grande" onclick="salir();" style="width:807px;background-color:red; position:absolute; z-index:100; margin:auto; height:805px;" >
+			<img id="img_grande" alt="" style="width:100%"/>
+		</div>
+		
+		<div class="casa" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/casa1.jpg" style="width:100%"/>
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)" >
+				Casa grande
+			</div>
+		</div>
+		
+		<div class="coche" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/coche1.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+		<div class="comida" name="caja_foto" onclick="zoom(this);" >
+			<img name="foto" src="imagenes/comida1.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="persona" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/persona1.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="casa" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/casa2.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+		<div class="coche" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/coche2.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="comida" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/comida2.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="persona" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/persona2.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="casa" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/casa3.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="coche" name="caja_foto" onclick="zoom(this);" >
+			<img name="foto" src="imagenes/coche3.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="comida" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/comida3.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="persona" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/persona3.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="casa" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/casa4.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="coche" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/coche4.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="comida" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/comida4.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+			<div class="persona" name="caja_foto" onclick="zoom(this);">
+			<img name="foto" src="imagenes/persona4.jpg" />
+			<div class="claro" onmousemove="activa_oscuro(this)" onmouseleave="activa_claro(this)">
+				Casa grande
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

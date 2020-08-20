@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script>
+	var medida=0;
+	var figura;
+	function empezar()
+	{
+		medida=parseInt(prompt("Introducir medida, debe ser un número entero entre 30 y 150"),10);
+		if(isNaN(medida))
+		{
+			//el valor introducido es incorrecto, no es un número
+			document.write("El valor introducido es incorrecto, no es un número");
+			return;
+		}
+		if(medida<30 || medida>150)
+		{
+			//la medida es superior a 150 o inferior a 30
+			document.write("El valor introducido es incorrecto, debe estar entre 30 y 150");
+			return;
+			
+		}
+		figura=prompt("Introduce 1=cuadrado o 2=círculo");
+		if(figura!=1 && figura!=2)
+		{
+			//el valor introducido es incorrecto, ni un 1 ni un 2
+			document.write("El valor introducido es incorrecto, debe ser un 1 o un 2");
+			return;
+		}
+		//el número es correcto
+		document.getElementById("cuadrado").style.width=medida+"px";
+		document.getElementById("cuadrado").style.height=medida+"px";
+		
+		if(figura==2)
+		{
+			//he cogido el circulo
+			document.getElementById("cuadrado").style.borderRadius=medida/2+"px";
+		}
+		iniciar();
+		
+	}
+	function iniciar()
+	{
+		
+		document.getElementById("cuadrado").style.backgroundColor="red";
+		reloj1=setInterval("abajo()",10);
+	}
+	function abajo()
+	{
+		
+		document.getElementById("cuadrado").style.top=document.getElementById("cuadrado").offsetTop+10+"px";
+		if (document.getElementById("cuadrado").offsetTop>window.innerHeight-(medida+10))
+		{
+		clearInterval(reloj1);
+		document.getElementById("cuadrado").style.backgroundColor="blue";
+		reloj1=setInterval("derecha()",10);
+		}
+	}
+	function derecha()
+	{
+		
+		document.getElementById("cuadrado").style.left=document.getElementById("cuadrado").offsetLeft+10+"px";
+		if (document.getElementById("cuadrado").offsetLeft>window.innerWidth-(medida+20))
+		{
+		clearInterval(reloj1);
+		document.getElementById("cuadrado").style.backgroundColor="purple";
+		reloj1=setInterval("arriba()",10);
+		}
+	}
+	function arriba()
+	{
+		
+		document.getElementById("cuadrado").style.top=document.getElementById("cuadrado").offsetTop-10+"px";
+		if (document.getElementById("cuadrado").offsetTop<10)
+		{
+		clearInterval(reloj1);
+		document.getElementById("cuadrado").style.backgroundColor="green";
+		reloj1=setInterval("izquierda()",10);
+		}
+	}
+	function izquierda()
+	{
+		document.getElementById("cuadrado").style.left=document.getElementById("cuadrado").offsetLeft-10+"px";
+		if (document.getElementById("cuadrado").offsetLeft<10)
+		{clearInterval(reloj1);
+		iniciar();}
+	}	
+	</script>
+	
+</head>
+	<body onload="empezar();">
+			<div id="cuadrado" style="width:0px;height:0px;background-color:red;position:absolute;">
+			</div>
+	</body>
+</html>

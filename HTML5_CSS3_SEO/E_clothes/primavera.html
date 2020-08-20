@@ -1,0 +1,338 @@
+<! DOCTYPE html>
+<html lang="es"> <!-- ayuda los buscadores a definir la idioma de la página -->
+	<head>
+	<meta charset="utf-8"> 
+	<title> Primavera | FashionDay</title>
+		<!-- los cuatro estilos css para el global, el ordenador , el móvil y la Tablet --> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/global.css" rel="stylesheet" type="text/css" />
+		<link href="css/estilos-pc.css" rel="stylesheet" type="text/css" media="(min-width:1050px)" />
+		<link href="css/estilos-tablet.css" rel="stylesheet" type="text/css" media="(min-width:511px) AND (max-width: 1049px)"/>
+		<link href="css/estilos-movil.css" rel="stylesheet" type="text/css" media="(max-width:510px)" />
+		<!-- Fin Fuentes de Google Fonts --> 
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		
+			
+	</head>
+	<body class="fondo"> <!-- la clase fondo es para poner los margines a 0 -->
+		<div class="todo relativa top-container"><!-- la capa que contiene la parte superior de la página, es relativa y lleva todas las otras capas encima -->
+		<!-- la imagen principal que sale en la parte superior de la página que ocupa todo el ancho --> 
+			<div class="todo"><img class="todo" src="images/general/primavera.png" alt="photo principal" title="photo principal"/></div>
+			<!-- cada capa tiene una clase que define su position en la capa padre -->
+			
+			<!-- el logo de la página -->
+			<div class="logo absoluta">
+				<a href="index.html"><img class="todo" src="images/general/hijab-logoT.png" alt="Logo" title="Logo"/></a>
+			</div> 
+			
+			<div class=" todo color-top absoluta"></div> <!-- capa que da un tono oscuro al Menu y la capa de idiomas -->
+				
+			<div class="idiomas absoluta"> <!-- capa de idiomas donde puedes elegir entre en el inglés y el castellano -->
+					<img class="floatleft" src="images/general/icon-earth.png" alt="idiomas" title="idiomas"/>
+					<div class="floatleft"><a class="link font1 white" href="#">Español</a></div>
+					<!-- línea vertical entre los dos idiomas -->
+					<div class="vl floatleft"></div>
+					<div class="floatleft"><a class="link font1 white" href="#">English</a></div>
+							
+			</div>
+			<div class="menu floatright absoluta"><!-- el menu version PC -->
+					<ul>
+						<li class="home"><a href="index.html"><span>Inicio</span></a></li>
+						<li class="tutorials"><a href="nosotros.html"><span>Nosotros</span></a></li>
+						<li class="about"><a href="tendencias.html"><span>Tendencias</span></a></li>
+						<li class="news"><a href="tienda.html"><span>Tienda</span></a></li>
+						<li class="contact"><a href="contacto.html"><span>Contacto</span></a></li>
+					</ul>
+			</div>
+			<div class="menumovil absoluta"><!-- el Menu versión móvil y Tablet -->
+				<input type="checkbox" class="checkbox" id="menu-toogle"/>
+				<label for="menu-toogle" class="menu-toogle"></label>
+				<nav class="nav">
+				  <a href="#" class="nav__item current">Inicio</a>
+				  <a href="#" class="nav__item">Nosotros</a>
+				  <a href="#" class="nav__item">Tendencias</a>
+				  <a href="#" class="nav__item">Tienda</a>
+				  <a href="#" class="nav__item">Contacto</a>
+				</nav>
+			</div>
+			
+			
+			<div class="client absoluta"> <!-- el cliente puede iniciar o crear una sesión, la capa contiene la imagen del login y la palabra login -->
+				<div class="floatleft todo imglogin"><a href="#"><img class="todo" src="images/general/login-checked.png" alt="login" title="login"/></a></div>
+				<div class="floatleft"><a class ="link floatright" href="#">Login</a></div>
+			</div>
+		</div>
+
+		<div class="container"> <!-- la capa que contiene las fotos de la temporada. en esta pagina primavera y textos para la descripcion de las tendancias es esta temporada-->
+			<!-- cada capa tiene una foto y un texto con un titulo que ocupa todo el ancho de la capa container -->
+			
+			<!-- capa 1 -->
+			<div class="todo cuadroprimavera">
+				<div class=" media-foto floatright">
+					<img class="foto-round-right todo" src="images/general/primavera1.jpg" alt="Primavera" title="Primavera"/>
+				</div>
+				<div class=" media-primavera floatleft">
+					<h2 class="title-primavera todo">QUE NO FALTEN LAS FLORES</h2>
+					<p class="parrafo-primavera todo">Como no podía ser de otra manera, en primavera, los protagonistas son los estampados florales pero esta vez vienen más oscuros que nunca. Y es que las flores más delicadas y etéreas se dibujan sobre tejidos en color negro de tul o seda.</p>
+				</div>
+			</div>
+			<div class="borrar"></div>
+			<!-- capa 2  esta capa tiene el orden de la foto y el texto invertido-->
+			<div class="todo cuadroprimavera ">
+				<div class=" media-foto todo floatleft ">
+					<img class=" foto-round-left todo" src="images/general/primavera2.jpg" alt="Primavera" title="Primavera"/>
+				</div>
+				<div class=" media-primavera floatright">
+					<h2 class="title-primavera todo">TONOS TIERRA</h2>
+					<p class="parrafo-primavera todo">El camel ya es uno de los colores estrella de esta temporada. Junto a él, las distintas tonalidades de marrón y de beige se vuelven protagonistas de un sinfín de estilismos. Lo mejor de todo es que es facilísimo combinarlos entre sí y que, dada su neutralidad, es muy difícil que falles.</p>
+				</div>
+
+			</div>
+			<div class="borrar"></div>
+			<!-- capa 3 -->
+			<div class="todo cuadroprimavera ">
+				<div class=" media-foto floatright">
+					<img class=" foto-round-right todo" src="images/general/primavera3.jpg" alt="Primavera" title="Primavera"/>
+				</div>
+				<div class=" media-primavera floatleft">
+					<h2 class="title-primavera">VOLANTES POR TODAS PARTES</h2>
+					<p class="parrafo-primavera todo ">los flecos aportaban movimiento, los volantes aun más. El toque estético más flamenco de todos seguirá alegrando nuestros estilismo de primavera y verano un año más. Lleves lo que lleves, unos cuantos volantes suben el autoestima.</p>
+				</div>
+			</div>
+			<div class="borrar"></div>
+			<div class="video-primavera todo"> <!-- esta capa contiene un video que presenta la tendencias de esta temporada -->
+				<!-- título subrayado por una línea -->
+				<div class="centrar paddingtop"><h4 class="title  greenblue centrar-texto">Más Cerca</h4></div>
+				<div class="linea centrar"></div>
+				<!-- el video es de youtube el iframe nos lleva a la dirccion que esta escrita en src -->
+				<div class="todo"><iframe class="todo" height="600" src="https://www.youtube.com/embed/DrX-EwTZ710?start=11"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+			</div>
+			<div class="borrar"></div>
+			
+			
+			
+			<div class="Sugerencias todo over"> <!-- en está capa presentamos unos articulos que están relacionadas con la temporada y que pueden interesar al client -->
+				<!-- título subrayado por una línea -->
+				<div class="centrar"><h4 class="title  greenblue centrar-texto">Sugerencias</h4></div>
+				<div class="linea centrar"></div>
+				<!-- cada capa registro tiene una imagen del articulo y una tabla que contiene la información sobre este artículo -->
+				
+					<div class="registro marginleft0 floatleft-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia1.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Tunic Festival</p>
+										<p><span>Precio: </span>30€</p>
+										<p><span>Marca: </span>Modanisa</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				<div class="registro floatright-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia2.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Rose Dress</p>
+										<p><span>Precio: </span>50€</p>
+										<p><span>Marca: </span>Refka</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="borrarpie"></div> <!-- utilizado solo en la versión Tablet para tener dos artículos por línea -->
+					
+					<div class="registro floatleft-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia3.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre:</span>Sky Dress</p>
+										<p><span>Precio:</span>150€</p>
+										<p><span>Marca:</span>Tavin</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="registro marginleft0 floatright-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia4.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Colorful Scarf</p>
+										<p><span>Precio: </span>15€</p>
+										<p><span>Marca: </span>Tavin</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+					<div class="borrarpie"></div>
+					
+					<div class="registro  floatleft-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia5.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos todo">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Dress Freedom</p>
+										<p><span>Precio: </span>40€</p>
+										<p><span>Marca: </span>Benin</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+					<div class="registro floatright-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia6.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Pink Dress</p>
+										<p><span>Precio: </span></p>
+										<p><span>Marca: </span>Modanisa</p>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+					</div>
+					
+					<div class="borrarpie"></div>
+					
+					<div class="registro marginleft0 floatleft-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia7.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Rose Dress</p>
+										<p><span>Precio: </span>50€</p>
+										<p><span>Marca: </span>Refka</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="registro floatright-tablet">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia8.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Rose Dress</p>
+										<p><span>Precio: </span>50€</p>
+										<p><span>Marca: </span>Refka</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="borrarpie floatleft-tablet"></div>
+					<div class="registro">
+						<div class="image-sugerencia"><img class="todo" src="images/general/sugerencia9.jpg" alt="Sugerencia 1" title="Sugerencia 2"/></div>
+						<div class="info-productos">
+							<table class="todo">
+								<tr>
+									<td>
+										<p><span>Nombre: </span>Rose Dress</p>
+										<p><span>Precio: </span>50€</p>
+										<p><span>Marca: </span>Refka</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+			</div>
+		<div class="borrar"></div>
+	</div>
+	<!-- esta capa presenta las tres marcas más compradas que están presentadas con listas no ordenadas e imágenes que muestran la clasificación -->
+	<div class="info-top">
+		<ul>
+			<li>
+				<a href="modanisa.html"><img class="img-orden" src="images/general/first.png" alt="first" title="first"  /></a>
+				<a href="modanisa.html">Modanisa</a>
+			</li>
+			
+			<li>
+				<a href="refka.html"><img class="img-orden" src="images/general/second.png" alt="second" title="second"  /></a>
+				<a class="" href="refka.html">Refka</a>
+			</li>	
+			
+			<li>
+				<a href="Benin.html"><img class="img-orden" src="images/general/third.png" alt="third" title="third"  /></a>
+				<a href="Benin.html">Benin</a>
+			</li>
+		</ul>
+	</div>
+	<div class="borrar black"></div>
+	<div class="footer gray over"> <!-- el pie de la página que está compuesto de columnas cada una lleva un título y subtítulos -->
+		<div class="columna floatleft">
+			<h4>FashionDay</h4>
+			<p><a href="nosotros.html" title="Nosotros">Nosotros</a></p>
+			<p><a href="aviso-legal.html" title="Aviso Legal">Aviso Legal</a></p>
+			<p><a href="metodos-pago.html" title="Métodos de pago">Métodos de pago</a></p>
+			<p><a href="politicas-envio.html" title="políticas de envío">políticas de envío</a></p>
+		</div>
+		<div class="columna floatleft columnamovil">
+			<h4>Servicios</h4>
+				<p><a href="novedades.html" title="Novedades">Novedades</a></p>
+				<p><a href="sugerencias.html" title="Sugerencias">Sugerencias</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Devolución</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Cambio</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Regalos</a></p>					
+		</div>
+		<div class="borrarpie"></div>
+		<!-- la clase borrarpie y linea-movil son activas en las versiones móvil y Tablet es para tener una presentación diferente -->
+		<div class="linea-movil linea-tablet"><hr></div>
+		<div class="columna floatleft">
+			<h4>Categorías</h4>	
+			<p><a href="ropa.html" title="ropa">ropa</a></p>
+			<p><a href="vestidos.html" title="vestidos">vestidos</a></p>
+			<p><a href="Accesorios.html" title="Accesorios">Accesorios</a></p>
+			<p><a href="Calzado.html" title="Calzado">Calzado</a></p>	
+		</div>
+		<div class=" floatleft columna columnamovil">
+			<h4>Marcas</h4>
+			<p><a href="refka.html" title="Refka">Refka</a></p>
+			<p><a href="benin.html" title="Benin">Benin</a></p>
+			<p><a href="alia.html" title="Alia">Alia</a></p>
+			<p><a href="tavin.html" title="Tavin">Tavin</a></p>
+		</div>
+		<div class="borrarpie"></div>
+		<div class="linea-movil linea-tablet"><hr></div>
+		<!-- esta capa contiene los contactos: redes sociales, número de teléfono y dirección mail -->
+		<div class="footer-social over">
+			<!-- capa  redes sociales -->
+			<div>
+				<h4>FOLLOW US</h4>
+				<a href="#" title="Facebook"><img src="images/general/Facebook.png" alt="Facebook" title="Facebook"/></a>
+				<a href="#" title="Instagram"><img src="images/general/Instagram.png" alt="Instagram" title="Instagram"/></a>
+				<a href="#" title="Youtube"><img src="images/general/Youtube.png" alt="Youtube" title="Youtube"/></a>   
+			</div>
+			<!-- capa contacto -->
+			<div>
+				<h4>CONTACT US</h4>
+				<div class="floatleft"><a href="+34650788557"><img src="images/general/phone.png" alt="telefono" title="telefono"  /></a></div>
+				<div class="floatleft"><a class="link colortext" href="+34650788557"> 650 78 85 57</a></div>
+					<div class="borrar"></div>
+				<div class="floatleft	"><a href="FashionDay@inform.com"><img src="images/general/email.png" alt="email" title="email"/></a></div>
+				<div class="email"><a class="link colortext" href="FashionDay@inform.com">FashionDay@gmail.com</a></div>  
+			</div>
+		 </div>	
+	</div>
+	</body>
+</html>

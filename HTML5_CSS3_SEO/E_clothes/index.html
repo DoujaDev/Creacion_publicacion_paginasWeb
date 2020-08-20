@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"> 
+	<title>INICIO| FashionDay</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+		<!-- los cuatro estilos css para el global, el ordenador , el móvil y la Tablet --> 
+		<link href="css/global.css" rel="stylesheet" type="text/css" />
+		<link href="css/estilos-movil.css" rel="stylesheet" type="text/css" media="(max-width: 510px)" />
+		<link href="css/estilos-pc.css" rel="stylesheet" type="text/css" media="(min-width: 1050px)" />
+		<link href="css/estilos-tablet.css" rel="stylesheet" type="text/css" media="(min-width:511px) AND (max-width: 1049px)"/>
+	
+		<!-- Fuentes de Google Fonts --> 
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+<body class="fondo"> <!-- la clase fondo es para poner los margines a 0 -->
+	<div class="todo relativa top-container"><!-- la capa que contiene la parte superior de la página, es relativa y lleva todas las otras capas encima esto significa que todas las capas que están dentro de la capa top-container son absolutas y tiene una posición propia -->
+		<!-- la imagen principal que sale en la parte superior de la página que ocupa todo el ancho --> 
+		<div class="todo"><img class="todo" src="images/general/container-topT.jpg" alt="photo principal" title="photo principal"/></div>
+		
+		<!-- cada capa tiene una clase que define su position en la capa padre -->
+		
+		<!-- el logo de la página --> 
+		<div class="logo absoluta">
+			<a href="index.html"><img class="todo" src="images/general/hijab-logoT.png" alt="Logo" title="Logo"/></a>
+		</div>  
+		<!-- capa que da un tono oscuro al menu y la capa de idiomas -->
+		<div class=" todo color-top absoluta"></div> 
+		<!-- capa de idiomas donde puedes elegir entre en el inglés y el castellano -->	
+		<div class="idiomas absoluta"> 
+				<!-- el icon tierra -->
+				<img class="floatleft paddingright-movil" src="images/general/icon-earth.png" alt="idiomas" title="idiomas"/>
+				<div class="floatleft"><a class="link font1 white" href="#">Español</a></div>
+				<!-- línea vertical entre los dos idiomas -->
+				<div class="vl floatleft"></div>
+				<div class="floatleft"><a class="link font1 white" href="#">English</a></div>
+						
+		</div>
+		<!-- el Menu versión PC-->
+		<div class="menu floatright absoluta">
+				<ul>
+					<li class="home"><a href="index.html"><span>Inicio</span></a></li>
+					<li class="tutorials"><a href="nosotros.html"><span>Nosotros</span></a></li>
+					<li class="about"><a href="tendencias.html"><span>Tendencias</span></a></li>
+					<li class="news"><a href="tienda.html"><span>Tienda</span></a></li>
+					<li class="contact"><a href="contacto.html"><span>Contacto</span></a></li>
+				</ul>
+		</div>
+		<!-- el Menu versión móvil y Tablet que es menu Menú desplegable lateral -->
+		<div class="menumovil absoluta">
+			<input type="checkbox" class="checkbox" id="menu-toogle"/>
+			<label for="menu-toogle" class="menu-toogle"></label>
+			<nav class="nav">
+			  <a href="#" class="nav__item current">Inicio</a>
+			  <a href="#" class="nav__item">Nosotros</a>
+			  <a href="#" class="nav__item">Tendencias</a>
+			  <a href="#" class="nav__item">Tienda</a>
+			  <a href="#" class="nav__item">Contacto</a>
+			</nav>
+		</div>
+		
+		<!-- el cliente puede iniciar o crear una sesión, la capa contiene la imagen del login y la palabra login -->
+		<div class="client absoluta"> 
+			<div class="floatleft todo imglogin"><a href="#"><img class="todo" src="images/general/login-checked.png" alt="login" title="login"/></a></div>
+			<div class="floatleft"><a class ="link floatright" href="#">Login</a></div>
+		</div>
+	</div>
+
+	 <!-- la capa que contiene el párrafo las fotos de cada temporada: otoño invierno primavera verano -->
+	<div class="container">
+	 <!-- esta capa contiene un párrafo que describe las tendencias del año actual y las fotos de las temporadas -->
+		<div class="todo">
+		<!-- la capa que contiene el párrafo -->
+			<div class="todo">
+				<p class="parrafo colortext">Que los setenta han vuelto no es ningún secreto. Y es que, este año, tanto pasarela como street style se han vestido de los colores más llamativos, de los estampados de flores, pantalones de tiro alto, chaquetas de pana y toques muy hippies. De hecho, ya puedes empezar a inspirarte con los mejores looks retro de los 70 a los 90.</p>
+			</div>
+		</div>
+		<div class="todo container-fotos"> <!-- una capa que contiene cuatro imagenes casa una representa una temporada (otoño, invierono, primavera, verano) y que son vinculos que llevan a otros páginas webs  -->
+			
+			<!-- el  título tendencia subrayado por una línea -->
+			<div class="centrar"><h4 class="title  greenblue centrar-texto">Tendencias</h4></div>
+			<div class="linea centrar"></div>
+			<div class="borrar"></div>
+			<!-- cada temporada contiene una imagen, un título y un cuadro con el color de la temporada. la capa imagen es relativa y las otras capas son absolutas y tiene una posición diferente -->
+			<!-- la temporada otoño -->
+			<a href="otono.html">
+				<div class="media floatleft temporada relativa">
+					<!-- imagen de la temporada -->
+					<img class="todo" src="images/general/hijab-otoño.jpg" alt="Otoño" title="Otoño"/>
+					<!-- el cuadro la temporada -->
+					<div class="todo absoluta cuadrointerior colorotono"></div>
+					<!-- el título la temporada -->
+					<div class="absoluta textotemporada posicionotono pink" >Otoño</div>
+				</div>
+			</a>
+			<!-- la temporada invierno -->
+			<a href="invierno.html"><div class="media floatleft temporada relativa">
+				<!-- imagen de la temporada -->
+				<img class="todo" src="images/general/hijab-invierno.jpg" alt="Invierno" title="Invierno"/>
+				<!-- el cuadro la temporada -->
+				<div class="todo absoluta cuadrointerior colorinvierno"></div>
+				<!-- el título la temporada -->
+				<div class="absoluta posicioninvierno textotemporada yellow" >Invierno</div>
+			</div></a>
+			<div class="borrar"></div>
+			<!-- la temporada primavera -->
+			<a href="primavera.html"><div class=" media floatleft  relativa">
+			<!-- imagen de la temporada -->
+				<img class="todo" src="images/general/hijab-primavera.jpg" alt="Primavera" title="Primavera"/>
+				<!-- el cuadro la temporada -->
+				<div class="todo absoluta cuadrointerior colorprimavera"></div>
+				<!-- el título la temporada -->
+				<div class="absoluta textotemporada green posicionprimavera" >Primavera</div>
+			</div></a>
+			<!-- la temporada verano -->
+			<a href="verano.html"><div class=" media floatleft  relativa">
+			<!-- imagen de la temporada -->
+				<img class="todo" src="images/general/hijab-verano.jpg" alt="verano" title="verano"/>
+				<!-- el cuadro la temporada -->
+				<div class="todo absoluta cuadrointerior colorverano"></div>
+				<!-- el título la temporada -->
+				<div class="absoluta posicionverano textotemporada clearblue" >Verano</div>
+			</div></a>
+		</div>
+	</div>
+	<div class="footer  gray over"> <!-- el pie de la página que está compuesto de columnas cada una lleva un título y subtítulos -->
+	
+		<div class="columna floatleft">
+			<h4>FashionDay</h4>
+			<p><a href="nosotros.html" title="Nosotros">Nosotros</a></p>
+			<p><a href="aviso-legal.html" title="Aviso Legal">Aviso Legal</a></p>
+			<p><a href="metodos-pago.html" title="Métodos de pago">Métodos de pago</a></p>
+			<p><a href="politicas-envio.html" title="políticas de envío">políticas de envío</a></p>
+		</div>
+		<div class="columna floatleft columnamovil">
+			<h4>Servicios</h4>
+				<p><a href="novedades.html" title="Novedades">Novedades</a></p>
+				<p><a href="sugerencias.html" title="Sugerencias">Sugerencias</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Devolución</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Cambio</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Regalos</a></p>					
+		</div>
+		<!-- la clase borrarpie y linea-movil son activas en las versiones móvil y Tablet es para tener una presentación diferente -->
+		<div class="borrarpie"></div> 
+		<div class="linea-movil linea-tablet"><hr></div>
+		<div class="columna floatleft">
+			<h4>Categorías</h4>	
+			<p><a href="ropa.html" title="ropa">ropa</a></p>
+			<p><a href="vestidos.html" title="vestidos">vestidos</a></p>
+			<p><a href="Accesorios.html" title="Accesorios">Accesorios</a></p>
+			<p><a href="Calzado.html" title="Calzado">Calzado</a></p>	
+		</div>
+		<div class=" floatleft columna columnamovil">
+			<h4>Marcas</h4>
+			<p><a href="refka.html" title="Refka">Refka</a></p>
+			<p><a href="benin.html" title="Benin">Benin</a></p>
+			<p><a href="alia.html" title="Alia">Alia</a></p>
+			<p><a href="tavin.html" title="Tavin">Tavin</a></p>
+		</div>
+		<div class="borrarpie"></div>
+		<div class="linea-movil linea-tablet"><hr></div>
+		<!-- esta capa contiene los contactos: redes sociales, número de teléfono y dirección mail -->
+		<div class="footer-social over">
+			<div>
+				<h4>FOLLOW US</h4>
+				<a href="#" title="Facebook"><img src="images/general/Facebook.png" alt="Facebook" title="Facebook"/></a>
+				<a href="#" title="Instagram"><img src="images/general/Instagram.png" alt="Instagram" title="Instagram"/></a>
+				<a href="#" title="Youtube"><img src="images/general/Youtube.png" alt="Youtube" title="Youtube"/></a>   
+			</div>
+			<div>
+				<h4>CONTACT US</h4>
+				<div class="floatleft"><a href="+34650788557"><img src="images/general/phone.png" alt="telefono" title="telefono"  /></a></div>
+				<div class="floatleft"><a class="link colortext" href="+34650788557"> 650 78 85 57</a></div>
+					<div class="borrar"></div>
+				<div class="floatleft	"><a href="FashionDay@inform.com"><img src="images/general/email.png" alt="email" title="email"/></a></div>
+				<div class="email"><a class="link colortext" href="FashionDay@inform.com">FashionDay@gmail.com</a></div>  
+			</div>
+		 </div>	
+	</div>
+	<!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+34631850012", // WhatsApp number
+            call_to_action: "Envíanos un mensaje", // Call to action
+            position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /WhatsHelp.io widget -->
+</body>
+</html>

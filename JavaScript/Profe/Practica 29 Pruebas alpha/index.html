@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+  function calcular()
+  {
+	//edadx1.7/peso
+	var edad=document.getElementById("edad").value;
+	var peso=document.getElementById("peso").value;
+	
+	if(edad=="")
+	 {
+		alert("El campo edad está vacío, la edad debe estar entre 0 y 99");
+		return;
+	 }
+	if(isNaN(edad))
+	{
+		alert("El campo edad debe contener números, la edad debe estar entre 0 y 99");
+		return;
+	}
+	if(edad % 1!=0)
+	{
+		alert("El campo edad no puede contener decimales");
+		return;
+	}
+	if(edad>99 || edad<0)
+	{
+		alert("La edad debe estar entre 0 y 99");
+		return;
+	}
+	if(peso=="")
+	 {
+		alert("El campo peso está vacío, el peso debe ser mayor que 0 y menor que 150");
+		return;
+	 }
+	if(isNaN(peso))
+	{
+		alert("El campo peso debe contener números, el peso debe ser mayor que 0 y menor que 150");
+		return;
+	}
+	if(peso>150 || peso<=0)
+	{
+		alert("El peso debe ser mayor que 0 y menor que 150");
+		return;
+	}
+	document.getElementById("resultado").innerHTML=(edad*1.7/peso).toFixed(2);
+	
+  }
+  function borrar()
+  {
+		document.getElementById("edad").value="";
+		document.getElementById("peso").value="";
+		document.getElementById("resultado").innerHTML="";
+  }
+  </script>
+</head>
+<body>
+	<div style="width:300px;background-color:lightgray;padding:20px;">
+		<form>
+			Edad: <input type="text" id="edad"/><br/><br/>
+			Peso: <input type="text" id="peso"/><br/><br/>
+			
+		</form>
+			<button onclick="calcular();">Calcular</button>
+			<button onclick="borrar()">Borrar</button><br/><br/>
+		Resultado: <span id="resultado" style="color:red;"></span>
+	</div>
+</section>
+</body>
+</html>

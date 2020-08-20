@@ -1,0 +1,49 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<script>
+			var sucursales = ["Madrid","Barcelona","Sevilla","Lugo"];
+			
+			/* document.write(sucursales); */
+			/* ***********************************************************
+			    Recorremos el arrat para un cantidad concreta de registros
+			   ***********************************************************
+			for(var c=0;c<=3;c++)
+			{
+				document.write(sucursales[c]+"<br/>");
+			}
+			
+			document.write("<br/><br/><br/>");
+			
+			var contador=0;
+			while (contador<=3)
+			{
+				document.write(sucursales[contador]+"<br/>");
+				contador++;
+			}
+			*/
+			
+			// ******************************************************************
+			// tres formas de recorrer un array desde el principio hasta el final
+			// ******************************************************************
+			for(c in sucursales)
+			{
+				document.write(sucursales[c]+"<br/>");
+			}
+			document.write("<br/><br/><br/>");
+			for(var c=0;c<sucursales.length;c++)
+			{
+				document.write(sucursales[c]+"<br/>");
+			}
+			document.write("<br/><br/><br/>");
+			var contador=0;
+			while(contador<sucursales.length)
+			{
+				document.write(sucursales[contador]+"<br/>");
+				contador=contador+1;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

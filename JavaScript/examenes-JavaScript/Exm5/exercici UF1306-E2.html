@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Ejercicio E1 UF1306</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<script src="form_exm.js"></script>	
+</head>
+<body onload="iniciar();">
+	<div id="cabecera">
+		<h1>Ejercicio E1 UF1306</h1>
+		<h2>Validación datos de formulario</h2>
+	</div>
+	<!-- Formulario de contacto -->
+	<div class="formulario">
+		<form name ="formularioContacto" class="formularioTipo1" method="get" action="https://ca.fundaciopacopuerto.cat/">
+			<p>Rellene el siguiente formulario de contacto:</p>
+			<div class="etiqueta">Razón social:</div><div class="capaderecha"><input type="text" id="razonsocial"  name="razonsocial"/></div>
+			<div class="etiqueta">CIF:</div><div class="capaderecha"><input class="anchomedio" id="cif" type="text" name="cif"/></div>
+			<div class="etiqueta">Dirección:</div><div class="capaderecha"><input class="anchogrande" id="direccion" type="text" name="direccion" /></div>
+			<div class="etiqueta">CP:</div><div class="capaderecha"><input class="anchopeque" id="cp" type="text" name="cp" /></div>
+			<div class="etiqueta">Población:</div><div class="capaderecha"><input id="poblacion" type="text" name="poblacion" /></div>
+			<div class="etiqueta">Email:</div><div class="capaderecha"><input id="email" type="text" name="email" /></div>
+			<div class="etiqueta">Delegación:</div><div class="capaderecha">
+				<input id="barcelona" type="radio" name="delegacion"/> <span>Barcelona </span>
+				<input id="tarragona" type="radio" name="delegacion"><span> Tarragona </span>
+				<input id="lleida" type="radio" name="delegacion"/> <span > Lleida </span>
+				<input id="girona" type="radio" name="delegacion"> <span> Girona </span><br/>
+			</div>
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div class="etiqueta">N Trabajadores:</div><div class="capaderecha"><input class="anchopeque" id="ntrabajadores" type="text" name="ntrabajadores" /></div>
+			<div class="etiqueta">Tipo empresa:</div>
+				<div class="capaderecha">
+					<select id="tipoempresa" name="tipoempresa" class="anchomedio">
+						<option value="vacio"></option>
+						<option value="autonomo">Autónomo</option>
+						<option value="sl">Sociedad Limitada</option>
+						<option value="sa">Sociedad Anónima</option>
+						<option value="fundacion">Fundación</option>
+					</select>
+				</div>
+			<div class="etiqueta">Consulta</div><div class="capaderecha"><textarea class="anchogrande textoasunto" id="consulta" name="consulta"></textarea></div>	
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>	
+			<div class="etiqueta">&nbsp;</div>
+			<div class="capaderecha"><input id="acepta" type="checkbox" name="acepta" /> Acepto las condiciones de confidencialidad.</div>	
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div>
+				<button type="submit" style="background-color:transparent;border:none;cursor:pointer;" value="Enviar"><img src="botonenviar.jpg" id="enviar"  style="width:100%;" onmouseover="cambiar_b(this.id);"  onmouseout="original_b(this.id);" onclick="click_b(this.id);"/></button>
+				<button type="reset" value="Vaciar" style="background-color:transparent;border:none;cursor:pointer;"><img  src="botoncancelar.jpg" id="vaciar" style="width:100%; height:32px;" onmouseover="cambiar_b(this.id)" onmouseout="original_b(this.id);" onclick="click_b(this.id);" /></button>
+			</div>	
+		</form>
+	</div>
+	
+	<!-- Carrusel  de imagenes -->
+	
+	<div style="position:relative;margin:auto;width:100%;overflow:hidden;height:630px; margin-top:20px;"><!-- tiene que ser relative para poder hacer las absolutas dent-->
+		
+		<div id="foto_izquierda" style="position:absolute;left:-1247px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="f1" alt="" src="imatge1.jpeg" style="width:1247px"/>
+		</div>
+		
+		<div id="foto_central" style="position:absolute;left:0px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="f2" alt="" src="imatge2.jpeg" style="width:1247px" />
+		</div>
+		
+		<div id="foto_derecha" style="position:absolute;left:1247px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="f3" alt="" src="imatge3.jpeg" style="width:1247px" />
+		</div>
+		
+		<div id="foto_derecha_2" style="position:absolute;left:1247px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="f4" alt="" src="imatge4.jpeg" style="width:2494px" />
+		</div>
+	</div>
+	<!-- texto de letras a cambiar a mayuscula con tiempo controlado-->
+	<div style="float:left;">
+		<p id="cadena">Hola mundo, estamos en clase de javascript</p>
+		<button  id="iniciar" onclick="iniciar_letras()"> Iniciar</button>
+		<button  id="pausar" onclick="parar()"> Pausar</button>
+		<button  id="continuar" onclick="continuar()"> Continuar</button>
+	</div>
+</body>
+</html>
+ 

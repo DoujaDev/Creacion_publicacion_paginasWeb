@@ -1,0 +1,40 @@
+<!doctype html> 
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Ejemplo de validación con HTML5</title>
+    <style>
+    input:invalid {
+         border: 1px solid red;
+        }
+         
+    /* Estilo por defecto */
+    input:valid {
+        border: 1px solid green;
+        }
+    </style>
+  </head> 
+  <body>
+     <h2>Formulario</h2>
+      <form>
+    Nombre: <input name="Nombre" type="text" id="Nombre" required
+                   oninvalid="setCustomValidity('Eres tonto, el nombre es obligatorio')" 
+                   oninput="setCustomValidity('')"/
+				   ><br /><br />
+    Password: <input type="password" name="password" id="Pwd" pattern="{6,} " required
+                     oninvalid="setCustomValidity('El password es obligatorio y debe tener como mínimo 6 caracteres')"
+                     oninput="setCustomValidity('')" /><br /><br />
+    Edad: <input name="Edad" type="number" id="Edad" min="18" max="40" required
+                 oninvalid="setCustomValidity('La edad debe ser entre 18 y 40 años.')"
+                 oninput="setCustomValidity('')" /><br /> <br />
+    Email: <input name="Email" id="Email" type="email" required
+                  oninvalid="setCustomValidity('Debe introducir un email correcto')"
+                  oninput="setCustomValidity('')" /><br /><br />
+				  
+				  
+				  
+				  
+    <input type="submit" value="Enviar" name="botonenviar"/>
+</form>
+  </body>
+</html>

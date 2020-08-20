@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<title>Ejemplos HTML5</title>
+</head>
+
+<body>
+<form>
+ Buscar un animal: 
+	<input type="text" list="animales" id="caja" name="animales"/><br /><br /><br />
+    <datalist id="animales">
+        <option label="Carnivoro" value="Perro" id="1" >
+        <option label="Herbivoro" value="Caballo" id="2">
+        <option label="Carnivoro" value="Oso" id="3">
+        <option label="Carnivoro" value="Mapache" id="4">
+        <option label="Herbivoro" value="Reno" id="5">
+    </datalist>
+ 
+    
+<datalist id="lista">
+ <option value="0">
+ <option value="1">
+ <option value="2">
+ <option value="3">
+ <option value="4">
+ <option value="5">
+ <option value="6">
+ <option value="7">
+ <option value="8">
+ <option value="9">
+ <option value="10">
+</datalist>
+
+<input type="range" min="0" max="10" value="3" step="1" id="mislider" list="lista"/><br /><br /><br />
+
+<datalist id="listaurls">
+ <option value="http://www.ccoo.cat" label="Comisiones Obreras">
+ <option value="http://www.ccoo.cat/fppuerto" label="Fundación Paco Puerto">
+ <option value="http://www.bdebolets.com" label="Associació Boletaire">
+</datalist>
+<input type="url" id="misurl" list="listaurls" size="100"/><br /><br /><br />
+
+<progress value="60" max="100">
+    
+</progress>
+<br /><br /><br />
+
+<meter min="0" max="120" value="40">
+    <span>1/3</span>
+</meter>
+
+<br /><br /><br />
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+.fondo{ /* poner el margen y el  padding de la página a 0 y poner Calibri como fuente por defecto */
+	margin:0;
+	padding:0;
+	font-family:calibri;
+}
+.centrar /* para centrar elementos: el título tendencias, la linea */
+{
+	margin:auto;
+}
+.centrar-texto /* para centrar el texto dentro de los  elementos: el título tendencias, */
+{
+	text-align:center;
+}
+.borrar{  /* para que no flotan los elementos y empezar a agregarlos en una nueva línea */
+	clear:both;
+}
+
+.over{
+	overflow:hidden;
+}
+
+.floatleft{ /* permite a los elementos flotar a la izquierda */
+	float:left;
+}
+
+.floatright{ /* permite a los elementos flotar a la derecha */
+	float:right;
+}
+
+.todo{ /* para dar a los elementos un ancho de 100% */
+	width:100%;
+}
+
+.media{ /* para dar a los elementos un ancgo de 50% */
+	width:50%;
+	overflow:hidden;
+}
+
+.relativa{ /* dar una posición relativa a unos elementos de la página como la  capa que contiene la imagen superior del fondo y los imágenes de las temporadas */
+	position:relative;
+}
+
+.absoluta{   /* dar una posición absoluta a unos elementos de la página como la imagen superior del fondo y los imágenes de las temporadas */
+	position:absolute;
+}
+
+.font1{ /* la primera fuente utilizada en la página */
+	font-family: 'Handlee', cursive;
+}
+
+.font2{ /* la seconda fuente utilizada en la página */
+	font-family: 'Pacifico', cursive;
+}
+
+.link{ /* modificamos los hipervínculos para darles nuestro estilo */
+  color:#32331e;
+  background-color: transparent;
+  text-decoration: none;
+
+}
+
+.colortext{
+	color:#1e4d77; /* color de texto en el index */
+}
+/* los colores utilizados en el sitio web */ 
+.gray{ /* el color de el pie de la página */
+background: rgb(238,238,238); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.yellow{
+	color:#fee25a;
+}
+
+.pink{
+	color:#e20074;
+}
+
+.green{
+	color:#15D22B;
+}
+
+.clearblue{
+	color:#28D2D2;
+}
+
+.greenblue{
+	color:#aad9b9;
+}
+
+.soomo{
+	background-color:#ffbb99;
+}
+
+
+.colorotono{
+	background-color:#b24f3f;  /* color de photo otoño */
+
+}
+
+.colorinvierno{
+	background-color:#fee25a;  /* color de photo invierno */
+	
+} 
+
+.colorprimavera{
+	background-color:#bbd634;  /* color de  photo primavera */
+} 
+
+
+.colorverano{
+	background-color:#a4dbdb;  /* color de photo verano */
+} 
+
+.black{
+	background-color:black;
+}
+
+/* fin los colores utilizados en el sitio web */ 
+
+.linea{  /* los títulos están subrayado por una línea */
+	background-image:url("../images/general/linea-color.png");
+	width:41%;
+	min-width:200px;
+	height:15px;
+	margin-bottom:3%;
+}
+
+
+/* -------------------------------------------------
+			estilos  header-top
+------------------------------------------------- */
+
+
+.color-top{ /* Características de la capa que da un tono oscuro al menu y la capa de idiomas */
+	background-color:black;
+	top:0;left:0;
+	height:10%;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+
+
+.logo{  /* posisión y el tamaño del logo de la página */
+	width:18%;
+	left:22%;
+	top:10%;
+}
+.vl{  /* Características de línea vertical que está entre los dos idiomas */
+	border-left: 3px solid #909486;
+	margin:0 2% 2% 2%;
+}
+
+.idiomas a{ /* modificamos la fuente y el color de los hipervínculos */
+	color:#FFF6F9;
+	font-family: 'Handlee', cursive;
+}
+
+.idiomas div:nth-child(2){ /* damos un padding al div que tiene la palabra español para que se aleje del icono tierra */ 
+	padding-left:4%;
+}
+
+.idiomas{ /* Características de la capa de idiomas donde puedes elegir entre en el inglés y el castellano */
+	left:60%;  /* modificado */
+	top:1%;
+	width:25%;
+}
+
+.client{ /* Características de la capa que contiene la imagen del login y la palabra login */
+	left:2%;
+	top:90%;
+	overflow:hidden;
+	width:20%;
+}
+
+.imglogin{ /* la imagen del login como un icono */
+	padding-right:3%;
+}
+
+.client a{  /* la palabra login es hipervínculo que lleva a la página login.html */
+	color:#FFF6F9;
+	font-family: 'Handlee', cursive;
+}
+
+/* -------------------------------------------------
+			estilos  container
+------------------------------------------------- */
+
+.container{   /* la capa que contiene el párrafo las fotos de las temporadas */
+	margin:auto;
+	width:80%;
+}
+
+.parrafo{  /* el párrafo que describe las tendencias del año actual */
+  display: block;
+  font-family: 'Handlee', cursive;
+  text-align:justify;
+}
+
+.title{   /* el estilo de los titulos */
+  display: block;
+  margin:0px;
+  font-family: 'Handlee', cursive;
+  padding: 0 0.2% 0 0.2%;
+   font-size:2.2em;
+}
+
+.textotemporada{    /* el estilo de los nombres de las temporadas, otono, invierno, primavera, y verano */ 
+	font-family: 'Pacifico', cursive;
+	opacity: 0.7;
+	filter: alpha(opacity=30);	
+}
+
+.container-fotos{ /* Características la capa que contiene las fotos de las cuatro temporada */
+	margin:10% 0;	
+}
+
+.temporada{ /* la capa que define las fotos de las temporadas */
+	margin-top:2%;
+}
+
+.cuadrointerior{ /*  el cuadro colorado de cada temporada que está dentro de las fotos*/
+	top:5%;
+	left:5%;
+	height:90%;
+	width:90%;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+
+/* posiciones del texto dentro de las fotos */
+.posicionotono{
+	top:10%;left:10%;
+}
+
+.posicioninvierno{
+	top:10%;left:53%;	
+}
+
+.posicionprimavera{
+	top:75%;left:10%;
+}
+
+.posicionverano{
+	top:75%;left:55%;
+}
+
+/* -------------------------------------------------
+			el pie de la página modificado
+------------------------------------------------- */
+
+.footer{ /* Características de la capa que contiene todo el pie */
+	padding:2% 10% 2% 10%;
+}
+
+.footer a,p{  /* estilo distinto para los enlaces de  el  pie */
+	color:#32331e;
+	background-color: transparent;
+	text-decoration: none;
+	margin-left:0;
+	margin-top:0;
+	margin-bottom:2%;
+}
+
+.footer h4{  /* el estilo de los titulos de el pie */
+	color:#32331e;
+	margin-bottom:0.67em;
+}
+
+hr{ 
+  display: block;
+  margin-top:3%;
+  margin-bottom:3%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.email{
+	float:left;
+	padding-left:1.5%;
+}
+
+/* -------------------------------------------------
+			la página primavera
+------------------------------------------------- */
+
+.cuadroprimavera{ /* la capa que  contiene  una imagén y un páraffo */
+	margin-top:10%;
+}
+
+.media-foto{ /* para dar la capa que contiene  las fotos que están representados con párrafos un ancho de 100% en la versión tablet y móvil */
+	width:100%;
+}
+
+.media-primavera{ /* el ancho de la capa que contiene el título y el páraffo */
+	width:100%;
+	overflow:hidden;
+	padding: 4% 2% 2% 2%;
+}
+.title-primavera{   /* el estilo de los titulos de los párrafos*/
+  display: block;
+  font-size:1.5em;        
+  margin: 5% 0 2% 0;
+}
+
+.parrafo-primavera{  /* el párrafo que describe las tendencias del año actual */
+  display: block;
+  font-family: 'Handlee', cursive;
+  font-size:1.5em;
+  text-align:justify;
+}
+
+.video-primavera{ /* Características de la capa que contiene un video que presenta las tendencias de esta temporada */
+	margin-top:15%;
+}
+
+.sugerencias{ /* la capa que contiene todos los articulos, dejamos un espacio entre el la capa del video y esta capa*/
+	padding-top:15%; 
+}
+
+.info-productos{ /* centramos la capa que contiene la tabla */
+	margin:auto;
+}
+
+.sugerencias .registro > div{ /* ponemos el ancho de todas las capas que están dentro de registro en 100% */
+	width:100%;
+}
+
+.image-sugerencia{  /* Características de los imágenes de los artículos */ 
+	padding-bottom:0.5%;
+	width:100%;
+}
+
+.info-productos{
+	width:100%;
+}
+
+.sugerencias table{ /* Características de la tabla que tiene la imformación sobre los artículos */ 
+	margin-bottom:10%;
+	background-color: rgb(238,238,238);
+	padding-top:8%;
+	width:100%;
+}
+
+.sugerencias tr td{ /* Características de los campos de la tabla que tiene el texto centrado */
+	display: block;
+	text-align:center;
+}
+
+.sugerencias p{ /* la información sobre un artículo lo ponemos como párrafo para que nos dé un salto de línea después de cada información */
+	display: block;
+	padding:1%;
+	font-size:1.4em;
+}
+
+.sugerencias span{ /* damos un color deferente al texto que está dentro del span */
+	color:#b24f3f;	
+}
+
+
+.info-top{ /* Características de la capa que presenta las tres marcas más compradas */
+	background-color:black;
+	height:15%;
+	opacity:0.7;
+	filter: alpha(opacity=30);
+	padding: 2% 11% 0 11%;
+	overflow:hidden;
+	
+}
+
+.info-top ul { /* eleminamos el padding por defecto izquierdo del ul */
+	padding-left:0;
+}
+
+.info-top ul li{ /* ponomos nuestro estilo a la lista que contiene la tres marca más compradas */
+	display:inline;
+	list-style: none;
+	text-align:center;
+	font-family: 'Handlee', cursive;
+	color:white;
+	font-size:1em;
+}
+
+.info-top a{  /* ponomos nuestro estilo a los hipervínculos que presenta los nombres de las marcas */
+	text-decoration:none;
+	text-align:center;
+	font-family: 'Handlee', cursive;
+	font-size:1.3em;
+	color:white;
+}
+
+.info-top a{ /* ponemos el tamaño de los nombres de las marcas a 1em */
+	font-size:1em;
+}
+
+
+

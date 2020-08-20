@@ -1,0 +1,23 @@
+body
+{
+	background-color:black;
+}
+.container
+{
+	overflow:hidden;
+	max-width:1400px;
+	width:98%;
+	background-color:silver;
+	margin:auto;
+	
+}
+.cajafoto img
+{
+	width:100%;
+	
+}
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Practica21</title>
+	<link href="https://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet">
+	<style type="text/css">
+		.ocultar
+		{
+			display:none;
+		}
+		.mostrar
+		{
+			display:inline;
+		}
+	</style>
+   <script type="text/javascript">
+		
+		var reloj;
+		var contador=0;
+		var cadena_de_texto="";
+		function iniciar()
+		{
+			cadena_de_texto=document.getElementById("cadena").innerHTML; //guardo la cadena de texto en memoria
+			reloj=setInterval("cambioletra()",1000); //pongo en marcha el timer
+		}
+		function cambioletra()
+		{
+			if (contador<document.getElementById("cadena").innerText.length) //comprobar si ha llegado al final
+			{
+				//El contador no ha llegado al final y pasamos a la siguiente letra
+				document.getElementById("cadena").innerHTML=cadena_de_texto.substring(0,contador-1)+cadena_de_texto.charAt(contador).toUpperCase()+cadena_de_texto.substring(contador+1);
+					// cadena_de_texto.substring(0,contador-1) Me devuelve la cadena anterior a la posicion actual
+					//cadena_de_texto.charAt(contador).toUpperCase() Pasa a mayuscula la posicion actual
+					//cadena_de_texto.substring(contador+1) Me devuelve la cadena posterior a la posicion actual
+				contador++;
+			}
+			else
+			{
+				//el contador ha llegado al final y volvemos al principio de la frase
+				contador=0;
+			}
+		}
+		function parar()
+		{
+			clearInterval(reloj);
+			document.getElementById("pausar").className="ocultar";
+			document.getElementById("continuar").className="mostrar";
+		}
+		function continuar()
+		{
+			reloj=setInterval("cambioletra()",100);
+			document.getElementById("pausar").className="mostrar";
+			document.getElementById("continuar").className="ocultar";
+		}
+		
+	</script>
+	
+</head>
+ 
+<body onload="iniciar()">	
+	<p id="cadena">hoy es jueves y estoy en clase de informatica</p>
+	<button class="mostrar" id="pausar" onclick="parar()"> Pausar</button>
+	<button class="ocultar" id="continuar" onclick="continuar()"> Continuar</button>
+</body>
+</html>

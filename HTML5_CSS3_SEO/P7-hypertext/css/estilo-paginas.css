@@ -1,0 +1,32 @@
+
+body{
+	background-color:black;
+}
+
+.imgflor{
+	width:800px;
+}
+
+.cuadro{
+	background-color:white;
+	padding:25px;
+	width:800px;
+}
+
+.centrar{
+	margin:auto;
+}
+
+.estilo{
+	color:white;
+	font-family: 'Miss Fajardose', cursive;
+	font-size:80px;
+	text-align:center;
+}
+
+.icon{
+	width:100px;
+	display:block; /* tratar la imagen como un bloque, block */
+	flot:left;
+}
+

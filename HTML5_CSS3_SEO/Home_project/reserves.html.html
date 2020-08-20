@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"> 
+	<title>Reserves| FashionDay</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+		<!-- los cuatro estilos css para el global, el ordenador , el móvil y la Tablet --> 
+		<link href="css/global.css" rel="stylesheet" type="text/css" />
+		<link href="css/estilos-movil.css" rel="stylesheet" type="text/css" media="(max-width: 510px)" />
+		<link href="css/estilos-pc.css" rel="stylesheet" type="text/css" media="(min-width: 1050px)" />
+		<link href="css/estilos-tablet.css" rel="stylesheet" type="text/css" media="(min-width:511px) AND (max-width: 1049px)"/>
+		<link href="css/formulario1.css" rel="stylesheet" type="text/css" />
+	
+		<!-- Fuentes de Google Fonts --> 
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+<body class="fondo"> <!-- la clase fondo es para poner los margines a 0 -->
+	<header class="todo relativa top-container"><!-- la capa que contiene la parte superior de la página, es relativa y lleva todas las otras capas encima esto significa que todas las capas que están dentro de la capa top-container son absolutas y tiene una posición propia -->
+		<!-- la imagen principal que sale en la parte superior de la página que ocupa todo el ancho --> 
+		<div class="todo"><img class="todo" src="images/general/catering.jpg" alt="photo principal" title="photo principal"/></div>
+		
+		<!-- cada capa tiene una clase que define su position en la capa padre -->
+		
+		<!-- el logo de la página --> 
+		<div class="logo absoluta">
+			<a href="index.html"><img class="todo" src="images/general/hijab-logoT.png" alt="Logo" title="Logo"/></a>
+		</div>  
+		<!-- capa que da un tono oscuro al menu y la capa de idiomas -->
+		<div class=" todo color-top absoluta"></div> 
+		<!-- capa de idiomas donde puedes elegir entre en el inglés y el castellano -->	
+		<div class="idiomas absoluta"> 
+				<!-- el icon tierra -->
+				<img class="floatleft paddingright-movil" src="images/general/icon-earth.png" alt="idiomas" title="idiomas"/>
+				<div class="floatleft"><a class="link font1 white" href="#">Español</a></div>
+				<!-- línea vertical entre los dos idiomas -->
+				<div class="vl floatleft"></div>
+				<div class="floatleft"><a class="link font1 white" href="#">English</a></div>
+						
+		</div>
+		<!-- el Menu versión PC-->
+		<nav class="menu floatright absoluta">
+				<ul>
+					<li class="home"><a href="index.html"><span>Inicio</span></a></li>
+					<li class="tutorials"><a href="nosotros.html"><span>Nosotros</span></a></li>
+					<li class="about"><a href="tendencias.html"><span>Tendencias</span></a></li>
+					<li class="news"><a href="tienda.html"><span>Tienda</span></a></li>
+					<li class="contact"><a href="contacto.html"><span>Contacto</span></a></li>
+				</ul>
+		</nav>
+		<!-- el Menu versión móvil y Tablet que es menu Menú desplegable lateral -->
+		<nav class="menumovil absoluta">
+			<input type="checkbox" class="checkbox" id="menu-toogle"/>
+			<label for="menu-toogle" class="menu-toogle"></label>
+			<nav class="nav">
+			  <a href="#" class="nav__item current">Inicio</a>
+			  <a href="#" class="nav__item">Nosotros</a>
+			  <a href="#" class="nav__item">Tendencias</a>
+			  <a href="#" class="nav__item">Tienda</a>
+			  <a href="#" class="nav__item">Contacto</a>
+			</nav>
+		</nav>
+		
+		<!-- el cliente puede iniciar o crear una sesión, la capa contiene la imagen del login y la palabra login -->
+		<div class="client absoluta"> 
+			<div class="floatleft todo imglogin"><a href="#"><img class="todo" src="images/general/login-checked.png" alt="login" title="login"/></a></div>
+			<div class="floatleft"><a class ="link floatright" href="#">Login</a></div>
+		</div>
+	</header>
+
+
+	<div class="container">
+		<!-- el  título tendencia subrayado por una línea -->
+			<div class="centrar"><h4 class="title  greenblue centrar-texto">Reserva</h4></div>
+			<div class="linea centrar"></div>
+			<div class="borrar"></div>
+			<section class="formulario">
+				<form method="POST" action="envio.php">
+				<fieldset>
+						<legend>DATOS DE CONTACTO</legend>
+						<label for="nombre">Nombre particular o empresa: </label><div><input type="text" name="nombre" id="nombre" required="required" placeholder="Su Nombre ..." autofocus="autofocus" placeholder="Introduce Su teléfono ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor introduzca su nombre')" oninput="setCustomValidity('')" /></div>
+						<div class="borrar"></div>
+						<label for="contacto">Persona de contacto: </label><div><input type="text" name="contacto" id="contacto" placeholder=" Si es una empresa  ..." /></div>
+						<div class="borrar"></div>
+						<label for="telefono">Teléfono: </label><div><input type="text" name="telefono" id="telefono" pattern="[0-9]{9}" placeholder="Introduce Su teléfono ..." oninvalid="setCustomValidity('Por favor, introduzca 9 dígitos ')" oninput="setCustomValidity('')" /></div>
+						<div class="borrar"></div>
+						<label for="email">Correo electrónico: </label><div><input type="email" name="email" required="required" placeholder="Introduce su email ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, imtroduzca su correo electrónico')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="web">Página Web:</label><div><input type="url" name="web" id="web" placeholder=" Si es una empresa ..." oninvalid="setCustomValidity('Por favor, Introduzca una página web válida')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="tipo">Tipo de contacto:</label>
+						<div class="tipo"><input type="radio" name="tipo" value="particular" required="required"/><span>Particular</span></div>
+						<div class="tipo"><input type="radio" name="tipo" value="empresa" required="required"/><span>Empresa</span></div>
+					</fieldset>
+					<br/><br/>
+				<fieldset>
+						<legend>DATOS DEL EVENTO</legend>
+						<label for="nombreevento">Nombre del evento: </label><div><input type="text" name="nombreevento" id="nombreevento" required="required" placeholder="Introduce el nombre del evento ..." autofocus="autofocus" placeholder="Introduce Su teléfono ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca el nombre del evento ')" oninput="setCustomValidity('')" /></div>
+						<div class="borrar"></div>
+						<label for="categoria">Categoría del evento: </label>
+						<div>	
+							<input type="text" list="categoria" name="categoria" required="required"  placeholder="Introduce la categoría del evento ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca la categoría del evento')" oninput="setCustomValidity('')" />
+							<datalist id="categoria">
+								<option value="Boda"/>
+								<option value="Cena empresa"/>
+								<option value="Cumpleaños"/>
+								<option value="Funeral"/>
+							</datalist>
+						</div> 
+						<div class="borrar"></div>
+						<label for="fecha">Fecha del evento:</label>
+						<div><input type="date"  name="fecha" required="required" id="fecha" oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca la fecha del evento')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="horainicio">Hora de incio:</label>
+						<div><input type="time" name="horainicio" id="horainicio" required="required" oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca la hora de incio del evento')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="horafinal">Hora de incio:</label>
+						<div><input type="time" name="horafinal" id="horafinal" required="required" oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca la hora final del evento')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="numeroadultos">Número de asistentes adultos:</label>
+						<div><input type="number" name="numeroadultos" id="numeroadultos" required="required" min="0"  oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca el número de asistentes adultos')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="numeroinfantiles">Número de asistentes infantiles:</label>
+						<div><input type="number" name="numeroinfantiles" id="numeroinfantiles" min="0" required="required" oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca el número de asistentes infantiles')" oninput="setCustomValidity('')"/></div>
+						<div class="borrar"></div>
+						<label for="menu">Tipos de menú: </label>
+						<div>	
+							<input type="text" list="menu" name="menu" required="required"  placeholder="Introduce el típo de menú ..." oninvalid="setCustomValidity('Este campo es obligatorio.Por favor, Introduzca el típo de menú')" oninput="setCustomValidity('')" />
+								<datalist id="menu">
+									<option value="Carne"/>
+									<option value="Pescado"/>
+									<option value="vegetariano"/>
+									<option value="Ecologico"/>
+								</datalist>
+						</div> 
+						<div class="borrar"></div>
+						<label for="servicio">Servicio de bar: </label>
+						<div><input style="margin-top:24px;"  type="checkbox" name="servicio" id="servicio"/></div>
+						<div class="borrar"></div>
+						<label for="comentario">Comentarios y observaciones:</label>
+						<div><textarea name="comentario" id="comentario" rows="10" cols="60" placeholder="Introduce su comentario ..."></textarea></div>
+				</fieldset>	
+				<div class="borrar"></div>
+				<div id="button">
+					<input type="submit" value="Enviar" />
+					<input type="reset" value="Borrar" />
+				</div>
+				</form>
+			</section>	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<footer class="footer  gray over"> <!-- el pie de la página que está compuesto de columnas cada una lleva un título y subtítulos -->
+	
+		<div class="columna floatleft">
+			<h4>FashionDay</h4>
+			<p><a href="nosotros.html" title="Nosotros">Nosotros</a></p>
+			<p><a href="aviso-legal.html" title="Aviso Legal">Aviso Legal</a></p>
+			<p><a href="metodos-pago.html" title="Métodos de pago">Métodos de pago</a></p>
+			<p><a href="politicas-envio.html" title="políticas de envío">políticas de envío</a></p>
+		</div>
+		<div class="columna floatleft columnamovil">
+			<h4>Servicios</h4>
+				<p><a href="novedades.html" title="Novedades">Novedades</a></p>
+				<p><a href="sugerencias.html" title="Sugerencias">Sugerencias</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Devolución</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Cambio</a></p>
+				<p><a href="Devolver.html" title="Devolver o reemplazar productos">Regalos</a></p>					
+		</div>
+		<!-- la clase borrarpie y linea-movil son activas en las versiones móvil y Tablet es para tener una presentación diferente -->
+		<div class="borrarpie"></div> 
+		<div class="linea-movil linea-tablet"><hr></div>
+		<div class="columna floatleft">
+			<h4>Categorías</h4>	
+			<p><a href="ropa.html" title="ropa">ropa</a></p>
+			<p><a href="vestidos.html" title="vestidos">vestidos</a></p>
+			<p><a href="Accesorios.html" title="Accesorios">Accesorios</a></p>
+			<p><a href="Calzado.html" title="Calzado">Calzado</a></p>	
+		</div>
+		<div class=" floatleft columna columnamovil">
+			<h4>Marcas</h4>
+			<p><a href="refka.html" title="Refka">Refka</a></p>
+			<p><a href="benin.html" title="Benin">Benin</a></p>
+			<p><a href="alia.html" title="Alia">Alia</a></p>
+			<p><a href="tavin.html" title="Tavin">Tavin</a></p>
+		</div>
+		<div class="borrarpie"></div>
+		<div class="linea-movil linea-tablet"><hr></div>
+		<!-- esta capa contiene los contactos: redes sociales, número de teléfono y dirección mail -->
+		<div class="footer-social over">
+			<div>
+				<h4>FOLLOW US</h4>
+				<a href="#" title="Facebook"><img src="images/general/Facebook.png" alt="Facebook" title="Facebook"/></a>
+				<a href="#" title="Instagram"><img src="images/general/Instagram.png" alt="Instagram" title="Instagram"/></a>
+				<a href="#" title="Youtube"><img src="images/general/Youtube.png" alt="Youtube" title="Youtube"/></a>   
+			</div>
+			<div>
+				<h4>CONTACT US</h4>
+				<div class="floatleft"><a href="+34650788557"><img src="images/general/phone.png" alt="telefono" title="telefono"  /></a></div>
+				<div class="floatleft"><a class="link colortext" href="+34650788557"> 650 78 85 57</a></div>
+					<div class="borrar"></div>
+				<div class="floatleft	"><a href="FashionDay@inform.com"><img src="images/general/email.png" alt="email" title="email"/></a></div>
+				<div class="email"><a class="link colortext" href="FashionDay@inform.com">FashionDay@gmail.com</a></div>  
+			</div>
+		 </div>	
+	</footer>
+</body>
+</html>

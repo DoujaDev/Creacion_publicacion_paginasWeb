@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es"> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!-- Tabla de codigos nuestra, para las ñ, acentos y demás -->
+	<title>Calculo Ayuda</title>
+	<script src="js/form.js"></script>
+	<style type="text/css">
+		.fondo
+		{
+			background-color:grey;
+			padding:20px;
+			width:300px;
+			color:white;
+		}
+		input
+		{
+			margin:5px;
+		}
+		.pequena
+		{
+			width:100px;
+			text-align:right;
+		}
+		.inactivo
+		{
+			background-color:lightgrey;
+		}
+	</style>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<div id="formulario" class="fondo">
+		<form method="POST" name="datospersonales" id="datospersonales" action="">
+			Nombre: <input type="text" name="nombre" id="nombre"/><br/>
+			Teléfono: <input type="tel" name="telefono" id="telefono"/><br/>
+			Hijos: <input class="pequena" type="text" name="hijos" id="hijos" value="0" onkeypress="return validar(event);" onblur="iniciar(this.id);"/><br/>
+			Estado Civil: <input type="text" list="estados" name="estadocivil" id="estadocivil" onchange="estado();" />
+				<datalist id="estados">
+					<option value="Casado/a" label="Alto">
+					<option value="Soltero/a" label="Bajo">
+					<option value="Pareja de hecho" label="Alto">
+					<option value="Divorciado/a" label="Bajo">
+					<option value="Viudo/a" label="Bajo">
+				</datalist>
+			Ingresos: <input class="pequena" type="text" name="ingresos" id="ingresos" value="0" onkeypress="return validar(event);" onblur="iniciar(this.id);"/><br/>
+			Gastos: <input class="pequena" type="text" name="gastos" id="gastos" value="0" onkeypress="return validar(event);" onblur="iniciar(this.id);"/><br/>
+			TOTAL: <input class="pequena inactivo" type="text" name="total" id="total" value="0" disabled="disabled"/><br/>
+			AYUDA: <input class="pequena inactivo" type="text" name="ayuda" id="ayuda" value="0" disabled="disabled"/><br/>
+			<img onclick="calcular();" style="width:40px;" src="boton_calcular.png"/>
+		</form>
+	</div>
+</body>
+</html>

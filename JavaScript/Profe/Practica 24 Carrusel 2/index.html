@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8"/>
+  <style>
+	.mostrar{display:block;}
+	.ocultar{display:none;}
+  </style>
+  <script src="funciones.js"></script>
+</head>
+<body onload="iniciar();">
+	<div style="position:relative;margin:auto;width:1050px;overflow:hidden;height:630px;"><!-- tiene que ser relative para poder hacer las absolutas dent-->
+		<div id="fotoizquierda" style="position:absolute;left:-1050px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="fizquierda" alt="" src="img/foto1.jpg" />
+		</div>
+		<div id="fotocentral" style="position:absolute;left:0px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="fcentral" alt="" src="img/foto2.jpg" />
+		</div>
+		<div id="fotoderecha" style="position:absolute;left:1050px;width:100%;"><!-- tiene que ser absolute-->
+			<img id="fderecha" alt="" src="img/foto3.jpg" />
+		</div>
+		<div id="flecha_izquierda" class="mostrar" style="position:absolute;left:0px;width:150px;top:220px;">
+			<img  src="img/flecha_izquierda.png">
+		</div>
+		<div id="flecha_derecha" class="mostrar" style="position:absolute;left:950px;width:150px;top:220px;">
+			<img  src="img/flecha_derecha.png">
+		</div>
+	</div>		
+</body>
+</html>

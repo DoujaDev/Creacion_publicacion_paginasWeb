@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio2</title>
+	<script>
+		function finestra(){
+		window.open("https://fundaciopacopuerto.cat/","ventana1","width=400,height=300,top=100,left=150");
+		// "https://fundaciopacopuerto.cat/" la dirección de la página web que se abre en la ventana nueva
+		// "ventana1"  es el Nombre de la nueva ventana
+		// width es el ancho,height es la la altura de la ventana nueva.
+		// top y left defininen la  posición de la nueva ventana
+			
+		}
+		function finestraentrada(){
+			var ancho=300; // el ancho de la nueva ventana
+			var alto=300; // la altura de la nueva ventana
+			var positionLeft=(window.screen.availWidth/2)-(ancho/2); // se calcula la posición de la nueva ventana para centrarla
+			var positionTop=(window.screen.availHeight/2)-(alto/2);
+			//para crear una nueva ventana con las medidas indicadas y la posición calculada-centrada
+			window.open("http://www.google.es","ventana2","width="+ancho+",height="+alto+",top="+positionTop+",left="+positionLeft);
+		}
+
+		function informacionnavegador(){
+		//guardamos el resultado de la consulta de las informaciones del navegador en una variable
+		// window es el objeto que hace referencia a la ventana actual
+		//navigator es el objeto que tiene la información del navegador
+			var informacion=
+			"El appCodeName de la página es: "+window.navigator.appCodeName+"<br/>"+
+			"El appName de la página es: "+window.navigator.appName+"<br/>"+
+			"El appVersion de la página es: "+window.navigator.appVersion+"<br/>"+
+			"El language de la página es: "+window.navigator.language+"<br/>"+
+			"La platform de la página es: "+window.navigator.platform+"<br/>"+
+			"El userAgent de la página es: "+window.navigator.userAgent+"<br/>";
+			var plugins=navigator.plugins;
+			// los plugins están guardados en un array
+			var mensajePlugins="<br/><br/><br/>Los Plugins de la página son:<br/> ";
+			// entonces accedemos a las informaciones sobre los plugins con un boucle for
+			for (var i in plugins)
+			{	
+				// escribimos el nombre de cada plugin
+				mensajePlugins=mensajePlugins+plugins[i].name+"<br/>";
+			}
+			
+			// mostramos toda la información sobre el navegador
+			document.getElementById("mensaje").innerHTML=informacion+mensajePlugins;
+		}
+	</script>
+	
+	
+</head>
+ 
+<body>	
+	<p onclick="finestra()">Crear un ventana nueva indicando tamaño, posición y página</p>
+	<p onclick="finestraentrada()"> Crear ventana nueva centrada indicando tamaño, posición y página</p>
+	<p onclick="informacionnavegador()">Mostrar la informacion del navegador</p>
+	<p id="mensaje"></p>
+</body>
+</html>

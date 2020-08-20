@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 6.1</title>
+		<script>
+			var numero1=parseInt(prompt("Introduce el número inicial"),10);
+			var numero2=parseInt(prompt("Introduce el número final"),10);
+			
+			if(isNaN(numero1) || isNaN(numero2)){
+				document.write("Por favor, Introduce un número");
+			}
+			else{
+				if(numero1>numero2){
+					document.write("El numero final debe ser superior del numero Inicial");
+				}
+				else{
+					var i=numero1;
+					while(i<=numero2){
+						document.write(i+"<br/>");
+						i++;
+					}
+					document.write("<br/><br/><br/>");
+					i=numero2;
+					while(i>=numero1){
+						document.write(i+"<br/>");
+						i--;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

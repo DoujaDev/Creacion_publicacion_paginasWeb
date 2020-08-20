@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Cambio de color de fondo de la web cada X tiempo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Ejemplo Cookies</title>
+    <script type="text/javascript">
+		
+		var contador = 1;
+		var canviocolor;
+		function cambiocolor()
+		{
+			canviocolor=setInterval("colores()", 1000);
+		}
+		
+		function colores()
+		{
+			if (contador == 1)
+				{
+				document.body.style.backgroundColor = "red";
+				}
+			if (contador == 2)
+				{
+				document.body.style.backgroundColor = "blue";
+				}
+			if (contador == 3)
+				{
+				document.body.style.backgroundColor = "green";
+				}
+			
+			if (contador==4)
+			{
+				document.body.style.backgroundColor = "white";
+				contador=0;
+			}
+			contador++;
+		}
+		function parar_reloj()
+		{
+			clearInterval(canviocolor);
+		}
+		
+	</script>
+</head>
+<body onload="cambiocolor();">
+	<p onclick="parar_reloj();">PARAR</p>
+</body>
+</html>

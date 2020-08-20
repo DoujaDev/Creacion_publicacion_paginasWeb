@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>||Trabajando con elementos||</title>
+  <style>
+	.aviso
+	{
+		color:red;
+		font-weight:bold;
+		font-size:12px;
+	}
+	input
+	{
+		margin-top:10px;
+	}
+  </style>
+  <script>
+	var hijos=0;//Para controlar los hijos que existen
+	var error="";
+	function inicializar()
+	{
+		document.getElementById("caja_casado").style.display="none";
+		document.getElementById("control_hijos").style.display="none";
+		document.getElementById("desglose_hijos").style.display="none";
+		
+		for(var a=hijos;a>=1;a--)
+		{
+			var el_hijo=document.getElementById("edad_hijo_"+a);
+			desglose_hijos.removeChild(el_hijo);
+			el_hijo=document.getElementById("span_hijo_"+a);
+			desglose_hijos.removeChild(el_hijo);
+			el_hijo=document.getElementById("enter_"+a);
+			desglose_hijos.removeChild(el_hijo);
+		}
+		hijos=0;
+		error="";
+	}
+	function control_texto(id_recibido)
+	{
+		var longitud=document.getElementById(id_recibido).value.length;
+		if(longitud>=5)
+			{document.getElementById("aviso_"+id_recibido).style.visibility="hidden";}
+		else
+			{document.getElementById("aviso_"+id_recibido).style.visibility="visible";}
+	}
+	function control_casado()
+	{
+		if (document.getElementById("casado").checked==true)
+			{document.getElementById("caja_casado").style.display="block";}
+		else
+			{document.getElementById("caja_casado").style.display="none";}
+	}
+	function control_hijos()
+	{
+		if(document.getElementById("hijos_si").checked==true)
+		{
+			document.getElementById("control_hijos").style.display="inline";
+			document.getElementById("desglose_hijos").style.display="inline";
+			crear_hijos();
+		}
+		else
+		{
+			document.getElementById("control_hijos").style.display="none";
+			document.getElementById("desglose_hijos").style.display="none";
+		}
+	}
+	function control_edad()
+	{
+		if (document.getElementById("edad_hijo_x").value<=0)
+			{document.getElementById("aviso_edad_hijo_x").style.visibility="visible";}
+		else
+			{document.getElementById("aviso_edad_hijo_x").style.visibility="hidden";}
+	}
+	function crear_hijos()
+	{
+		var numero_de_hijos=document.getElementById("numero_hijos").value;
+		if (hijos<numero_de_hijos)
+		{
+			//Se han ampliado los hijos
+			for(var a=hijos+1;a<=numero_de_hijos;a++)
+			{
+				hijos=a;
+				var texto_span=document.createElement("span");
+				texto_span.id="span_hijo_"+a;
+				var texto_hijo=document.createTextNode("Edad Hijo "+a+" ");
+				texto_span.appendChild(texto_hijo);
+				desglose_hijos.appendChild(texto_span);
+				var nuevo_hijo= document.createElement("input");
+				nuevo_hijo.id="edad_hijo_"+a;
+				nuevo_hijo.name="edad_hijo_"+a;
+				nuevo_hijo.type="number";
+				nuevo_hijo.style.width=40+"px";
+				nuevo_hijo.style.textAlign="right";
+				nuevo_hijo.min=1;
+				nuevo_hijo.value=1;
+				nuevo_hijo.setAttribute("onkeydown","return numero();");
+				desglose_hijos.appendChild(nuevo_hijo);
+				desglose_hijos.insertBefore(texto_span,nuevo_hijo);
+				var texto_span_enter=document.createElement("br");
+				texto_span_enter.id="enter_"+a;
+				desglose_hijos.appendChild(texto_span_enter);	
+			}
+		}
+		if (hijos>numero_de_hijos)
+		{
+			//Se han disminuido los hijos
+			var el_hijo=document.getElementById("edad_hijo_"+hijos);
+			desglose_hijos.removeChild(el_hijo);
+			el_hijo=document.getElementById("span_hijo_"+hijos);
+			desglose_hijos.removeChild(el_hijo);
+			el_hijo=document.getElementById("enter_"+hijos);
+			desglose_hijos.removeChild(el_hijo);
+			hijos=numero_de_hijos*1;
+		}
+	}
+	function numero()
+	{
+		return false;
+	}
+	function validar()
+	{
+		if(document.getElementById("nombre").value.length<5)
+		{
+			alert("El nombre no puede estar vacío");
+			return false;
+		}
+		if(document.getElementById("nombre_conyugue").value.length<5 && document.getElementById("casado").checked==true)
+		{
+			alert("El nombre del conyugue no puede estar vacío");
+			return false;
+		}
+	}
+  </script>
+</head>
+<body style="font-family:arial;">
+	<div style="margin:auto;width:500px;background-color:lightgray;padding:20px;">
+		<form name="datos" method="POST" onreset="inicializar();" onsubmit="return validar();" action="enviar.php">
+			<span style="font-size:20px;font-weight:bold;">DATOS PERSONALES</span><br/><br/>
+			<span>Nombre: </span><input id="nombre" name="nombre" type="text" onkeyup="control_texto(this.id)"><span class="aviso" id="aviso_nombre"> * Mínimo 5 caracteres <br/></span>
+			<span>Casado: </span><input id="casado" name="casado" type="checkbox" onchange="control_casado();"><br/>
+			<div id="caja_casado" style="display:none;">
+				<span>Nombre cónyugue: </span><input id="nombre_conyugue" name="nombre_conyugue" type="text" onkeyup="control_texto(this.id)"><span class="aviso" id="aviso_nombre_conyugue"> * Mínimo 5 caracteres <br/></span>
+			</div>
+			<span>Hijos: </span><input id="hijos_si" name="hijos" type="radio" onchange="control_hijos();">Si <input id="hijos_no" name="hijos" type="radio" onchange="control_hijos();"> No 
+			<div id="control_hijos" style="display:none;">
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;Número Hijos: </span><input id="numero_hijos" name="numero_hijos" type="number" style="width:40px;" min="1" value="1" onchange="crear_hijos();" onkeydown="return numero();"><br/>
+			</div>
+			<div id="desglose_hijos" style="display:none;">
+			</div>
+			<br/>
+			<input type="submit" id="enviar" value="Enviar" />
+			<input type="reset" id="borrar" value="Borrar" />
+		</form>
+	</div>
+</body>
+</html>

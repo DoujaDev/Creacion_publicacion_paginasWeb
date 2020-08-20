@@ -1,0 +1,24 @@
+<!-- Calcular la letra del nif en funcion de los numeros -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title></title>
+    <script type="text/javascript">
+		var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+		var numero=parseInt(prompt("Introduce tu numero de DNI"),10);
+		var calculo=numero % 23;
+		var letra=letras[calculo];
+		document.write("La letra de tu DNI es "+letra);
+	</script>
+	
+	
+	
+
+</head>
+ 
+<body>
+
+
+</body>
+</html>

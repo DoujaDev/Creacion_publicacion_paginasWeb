@@ -1,0 +1,78 @@
+<!-- Cambiar el color del semaforo de la siguiente forma
+	* verde 5 segundos
+	* amarillo 2 segundos, parpadeando cada 2 decimas de segundo
+	* rojo 5 segundos
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Semaforo</title>
+	<script type="text/javascript">
+	var color="verde";
+	var duracion=5000;
+	var relojgeneral;
+	var relojparpadeo;
+	var estado="on";
+	function iniciar()
+	{
+		relojgeneral=setInterval("cambiarcolor()",duracion);
+	}
+	function cambiarcolor()
+	{
+		if (color=="verde")
+		{
+			//cuando acaba el verde
+			//Poner en ambar
+			color="ambar";
+			duracion=2000;
+			clearInterval(relojgeneral);
+			relojgeneral=setInterval("cambiarcolor()",duracion);
+			relojparpadeo=setInterval("parpadeando()",200);
+		}
+		else if (color=="ambar")
+				{
+					//Cuando acaba el ambar
+					//Poner en rojo
+					clearInterval(relojgeneral);
+					duracion=5000;
+					relojgeneral=setInterval("cambiarcolor()",duracion);
+					color="rojo";
+					document.getElementById("semaforo").src="seamforvermell.png";
+					clearInterval(relojparpadeo);					
+				}
+			else  if (color=="rojo")
+				{
+					//cuando acaba el rojo
+					//Poner en verde
+					color="verde";
+					document.getElementById("semaforo").src="seamforverd.png";
+				}
+	
+	}
+	function parpadeando()
+	{
+		//enseña un dibujo u otro
+		console.log(document.getElementById("semaforo").src);
+		if (estado=="on")
+			{
+				estado="off";
+				document.getElementById("semaforo").src="seamforoapagado.png";
+			}
+			else 
+			{
+				estado="on";
+				document.getElementById("semaforo").src="seamforambar.png";
+			}		
+	}	
+	</script>
+</head>
+ <body onload="iniciar();">
+ 	<img src="seamforverd.png" id="semaforo"/> <!-- identificamos la imagen con el id semaforo -->
+</body>
+</html>
+
+ 
+
+ 

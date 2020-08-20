@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<script>
+			var dias = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
+			var dies = ["dilluns","dimarts","divendres","dijous","divendres","dissabte","diumenge"];
+			var days = ["mondy","tuesday","friday","thursday","wednesday","saturday","sunday"];
+			
+			var dia= prompt("Introduce un día");
+			/*var existe=dias.includes(dia);
+			if(existe==false){
+				document.write("Por favor introduce un dia")
+			}*/
+			var existe="no";
+	
+				for(var c in dias){	
+					if(dias[c]==dia){
+						document.write("El "+dia+"en catalán es: "+dies[c]+"<br/>");
+						document.write("El "+dia+"en inglés es: "+days[c]+"<br/>");
+						existe="si";
+						break;
+					}
+				}
+				if(existe=="no" || dia==""){
+				document.write("Por favor introduce un dia")
+			}
+		
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

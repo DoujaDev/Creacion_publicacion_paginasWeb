@@ -1,0 +1,108 @@
+.borrar{
+	clear:both;
+	margin:0;
+}
+
+.formulario{
+	width:100%;
+	margin-bottom:10%;
+}
+.formulario div{
+	float:left;
+	width:50%;	
+}
+
+.formulario span{
+	color:#3C6471;
+}
+
+.formulario legend{
+	color:#3C6471;
+	font-weight:bold;
+	font-size:1.4em;
+}
+
+
+
+form{
+	border-radius: 5px;
+	background-color: #F0F5F5;
+	padding: 20px;
+	overflow:hidden;
+	margin-top:10%;
+}
+
+label{
+	width:24%;
+	padding-top:20px;
+	float:left;
+}
+
+input{
+  width:55%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit],input[type=reset] {
+  width:48%;
+  background-color:#4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+input[type=number]{
+  width:16%;
+}
+
+input[type=time]{
+  width:23%;
+}
+
+textarea{
+  margin-top:5%;
+}
+
+input[type=checkbox]{
+  width:10%;
+}
+.tipo{
+	width:10%;
+}
+.tipo input{
+	width:5%;
+	margin-top:1.7%;
+} 
+
+#button{
+	float:none;
+	width:25%;
+	margin:auto;
+	overflow:hidden;
+	padding-left:0.8%;
+}
+
+label{
+	font-size:1.1em;
+	color:#3C6471;
+}
+
+

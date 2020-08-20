@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Practica 19</title>
+	<script type="text/javascript">
+		function ejercicio1()
+		{
+			window.open("http://www.google.es","ventana1","width=300,height=300,top=150,left=150");
+				// "http://www.google.es" El contenido de la ventana nueva
+				// "ventana1" Nombre que le asigno a la nueva ventana
+				// "width=300,height=300,top=150,left=150" Tamaño y posición de la nueva ventana
+			
+		}
+		function ejercicio5()
+		{
+			var ancho=300;
+			var alto=300;
+			var colocacion_izquierda=(window.screen.availWidth/2)-(ancho/2);
+			var colocacion_arriba=(window.screen.availHeight/2)-(alto/2);
+			window.open("http://www.google.es","ventana2","width="+ancho+",height="+alto+",top="+colocacion_arriba+",left="+colocacion_izquierda);
+		}
+		function ejercicio2()
+		{
+			alert(window.name+"\n"+ "Medidas de la ventana\n"+" Anchura "+window.innerWidth+" Altura "+ window.innerHeight);
+		}
+		function ejercicio3()
+		{
+			alert
+			(
+			"Altura total del monitor "+window.screen.height+"\n"+ //altura del monitor
+			"Altura de trabajo del monitor "+window.screen.availHeight+"\n"+ //altura disponible para trabajar del monitor
+			"Anchura total del monitor "+window.screen.width+"\n"+ //anchura del monitor
+			"Anchura de trabajo del monitor "+window.screen.availWidth //anchura disponible para trabajar del monitor
+			);
+		}
+		function ejercicio4()
+		{
+			alert("Tiene java "+navigator.javaEnabled());
+			var informacion=
+			"appCodeName"+navigator.appCodeName+"<br/>"+
+			"appName"+navigator.appName+"<br/>"+
+			"appVersion"+navigator.appVersion+"<br/>"+
+			"language"+navigator.language+"<br/>"+
+			"mimeTypes"+navigator.mimeTypes+"<br/>"+ //pendiente
+			"platform"+window.navigator.platform+"<br/>"+
+			"userAgent"+window.navigator.userAgent+"<br/>";
+			
+			var plugins=navigator.plugins;
+			var mensaje_plugins="<br/><br/><br/>Plugins ";
+			for (var c in plugins)
+			{
+				mensaje_plugins=mensaje_plugins+plugins[c].name+"<br/>";
+			}
+			
+			
+			document.getElementById("mensaje").innerHTML=informacion+mensaje_plugins;
+			
+			
+	
+		}
+	</script>
+</head>
+ 
+<body>	
+	<p onclick="ejercicio1()"> Ejecutar ejercicio 1 - Crea ventana nueva indicando tamaño, posición y página</p>
+	<p onclick="ejercicio2()"> Ejecutar ejercicio 2 - Muestra las medidas de la ventana actual</p>
+	<p onclick="ejercicio3()"> Ejecutar ejercicio 3 - Muestra las medidas del mmonitor</p>
+	<p onclick="ejercicio4()"> Ejecutar ejercicio 4 - Muestra la informacion del navegador</p>
+	<p onclick="ejercicio5()"> Ejecutar ejercicio 5 - Crea ventana nueva centrada indicando tamaño, posición y página</p>
+	<p id="mensaje"></p>
+</body>
+</html>

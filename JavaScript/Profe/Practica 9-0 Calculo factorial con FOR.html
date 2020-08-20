@@ -1,0 +1,23 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<script>
+			var factorial=1;
+			var numero=parseInt(prompt("Introduce un número"),10);		
+			if(isNaN(numero))
+			{
+				document.write("El número indicado no es correcto");
+			}
+			else
+			{
+				for (var c=1;c<=numero;c++)
+				{
+					factorial=factorial*c;
+				}
+			}
+			document.write("El factorial del numero "+numero+" es "+factorial);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

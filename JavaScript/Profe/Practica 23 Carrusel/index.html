@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+  var reloj_transicion;//para controlar el movimiento de las fotos
+  var reloj_muestra;//para controlar el tiempo total de la transicion
+  var tope=273;
+  var contador=0;
+  
+  
+  function inicio()
+  
+  {
+	rejoj_muestra=setInterval("iniciar_movimiento()",5000);
+	
+  }
+  function iniciar_movimiento()
+  {
+	reloj_transicion=setInterval("mover()",10);//cada 10 milisegundos va a ejecutar mover 
+  }
+  function mover()
+  {
+    if (contador<tope)//aqui le ponemos el tope de la imagen
+	{
+		document.getElementById("foto1").style.left=document.getElementById("foto1").offsetLeft+1+"px";
+		document.getElementById("foto2").style.left=document.getElementById("foto2").offsetLeft+1+"px";
+		document.getElementById("foto3").style.left=document.getElementById("foto3").offsetLeft+1+"px";
+		document.getElementById("foto4").style.left=document.getElementById("foto4").offsetLeft+1+"px";
+		document.getElementById("foto0").style.left=document.getElementById("foto0").offsetLeft+1+"px";
+		contador++;
+	}
+	else
+	{
+		contador=0;// pone el contador a 1
+		clearInterval(reloj_transicion); //aqui paras el movimiento de la foto
+		var temporal=document.getElementById("f0").src;
+		document.getElementById("f0").src=document.getElementById("f3").src;   //cambio la foto de una caja a otra
+		document.getElementById("foto0").style.left=-273+"px";  //Vuelvo a colocar la caja en su posicion inicial
+		
+		document.getElementById("f4").src=document.getElementById("f3").src;   //cambio la foto de una caja a otra
+		document.getElementById("foto4").style.left=819+"px"; //Vuelvo a colocar la caja en su posicion inicial
+		
+		document.getElementById("f3").src=document.getElementById("f2").src;   //cambio la foto de una caja a otra
+		document.getElementById("foto3").style.left=546+"px"; //Vuelvo a colocar la caja en su posicion inicial
+		
+		document.getElementById("f2").src=document.getElementById("f1").src;   //cambio la foto de una caja a otra 
+		document.getElementById("foto2").style.left=273+"px"; //Vuelvo a colocar la caja en su posicion inicial
+		
+		document.getElementById("f1").src=temporal;  //cambio la foto de una caja a otra
+		document.getElementById("foto1").style.left=0+"px";
+	}
+  }
+  
+  </script>
+</head>
+<body onload="inicio();">
+	<div style="position:relative;margin:auto;width:1092px;height:231px;overflow:hidden;"><!-- tiene que ser relative para poder hacer las absolutas dent-->
+		<div id="foto1" style="position:absolute;left:0px;"><!-- tiene que ser absolute-->
+			<img id="f1" alt="" class="team-img" src="img/team-1.jpg">
+		</div>
+		<div id="foto2" style="position:absolute;left:273px;">
+			<img id="f2" class="team-img" src="img/team-2.jpg">
+		</div>
+		<div id="foto3" style="position:absolute;left:546px;">
+			<img id="f3" class="team-img" src="img/team-3.jpg">
+		</div>
+		<div id="foto4" style="position:absolute;left:819px;overflow:hidden;">
+			<img id="f4" class="team-img" src="img/team-4.jpg">		<!-- imagen para saber el tope -->
+		</div>
+		<div id="foto0" style="position:absolute;left:-273px;">
+			<img id="f0" class="team-img" src="img/team-4.jpg">		<!-- imagen para saber el tope -->
+		</div>
+	</div>		
+</section>
+</body>
+</html>

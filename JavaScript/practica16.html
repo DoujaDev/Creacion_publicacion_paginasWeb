@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Tecla_Colores </title>
+		<script>
+			function cambiar_color(elEvento){
+				var ObjTecla = window.event || elEvento;
+				var tecla= ObjTecla.keyCode;
+				var valor_tecla=String.fromCharCode(tecla).toLowerCase();
+				if(valor_tecla == "r" ){
+					document.write(valor_tecla);
+					document.body.style.background="red";
+				}
+				if(valor_tecla == "v"){
+					document.write(valor_tecla);
+					document.body.style.background="green";
+				}
+				
+				if(valor_tecla == "a"){
+					document.write(valor_tecla);
+					document.body.style.background="yellow";
+				}
+			}
+		</script>
+	</head>
+	<body onkeypress=" cambiar_color(event);">
+	</body>
+</html>

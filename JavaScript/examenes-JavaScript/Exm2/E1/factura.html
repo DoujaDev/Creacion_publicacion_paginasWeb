@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Ejercicio1</title>
+	<script src="js/form.js"></script> <!-- el código script está en un archivo externo form.js -->
+	<style type="text/css">
+		
+		table.blueTable {
+		  border: 1px solid #1C6EA4;
+		  background-color: #EEEEEE;
+		  width: 80%;
+		  text-align: left;
+		  border-collapse: collapse;
+		}
+		table.blueTable td, table.blueTable th {
+		  border: 1px solid #AAAAAA;
+		  padding: 3px 2px;
+		}
+		table.blueTable tbody td {
+		  font-size: 13px;
+		}
+		table.blueTable tr:nth-child(even) {
+		  background: #D0E4F5;
+		}
+		table.blueTable thead {
+		  background: #1C6EA4;
+		  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+		  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+		  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+		  border-bottom: 2px solid #444444;
+		}
+		table.blueTable thead th {
+		  font-size: 15px;
+		  font-weight: bold;
+		  color: #FFFFFF;
+		  border-left: 2px solid #D0E4F5;
+		}
+		table.blueTable thead th:first-child {
+		  border-left: none;
+		}
+
+		table.blueTable tfoot {
+		  font-size: 14px;
+		  font-weight: bold;
+		  color: #FFFFFF;
+		  background: #D0E4F5;
+		  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+		  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+		  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+		  border-top: 2px solid #444444;
+		}
+		table.blueTable tfoot td {
+		  font-size: 14px;
+		}
+		table.blueTable tfoot .links {
+		  text-align: right;
+		}
+		table.blueTable tfoot .links a{
+		  display: inline-block;
+		  background: #1C6EA4;
+		  color: #FFFFFF;
+		  padding: 2px 8px;
+		  border-radius: 5px;
+		}
+	</style>
+</head>
+ 
+<body>	
+	<form method="POST" action="" name="factura" id="factura">
+		<table class="blueTable">
+			<thead>
+			<tr>
+			<th>Quantitat</th>
+			<th>Descripció</th>
+			<th>Preu Unitat</th>
+			<th>Subtotal</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<!-- se llama a la función validar cuando se pulsa una tecla es el evento onkeypress , es para que usuario introduzca sólo números enteros válidos-->
+			<td><input type="text" name="quantitat1" id="quantitat1" onkeypress="return validar(event);"/></td>
+			<td><input type="text" name="descripcio1" id="descripcio1"/></td>
+			<td><input type="text" name="preu_unitat1" id="preu_unitat1" onkeypress="return validar(event);"/></td>
+			<td><input type="text" name="subtotal1" id="subtotal1"/></td>
+			</tr>
+			<tr>
+			<td><input type="text" name="quantitat2" id="quantitat2" onkeypress="return validar(event);"/></td>
+			<td><input type="text" name="descripcio2" id="descripcio2"/></td>
+			<td><input type="text" name="preu_unitat2" id="preu_unitat2" onkeypress="return validar(event);"/></td>
+			<td><input type="text" name="subtotal2" id="subtotal2"/></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td style="text-align:right; font-weight:bold;">Base Imposable</td>
+			<td><input type="text" name="baseimposable" id="baseimposable"/></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td style="text-align:right; font-weight:bold;">IVA 21%</td>
+			<td><input type="text" name="iva" id="iva"/></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td style="text-align:right; font-weight:bold;">TOTAL</td>
+			<td><input type="text" name="total" id="total"/></td>
+			</tr>
+			</tbody>
+		</table>
+		<!-- se llama a la función operaciones cuando se hace un click con el ratón en la imagén, es el evento onclick -->
+		<img src="calcular.png" name="calcular" id="calcular" style="width:100px;" onclick="operaciones();"/>
+	</form>
+	
+</body>
+</html>

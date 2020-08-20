@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 10</title>
+		
+		<style>
+			.boton
+			{
+				width:100px;
+				height:25px;
+				background-color:grey;
+				text-align:center;
+				padding-top:5px;
+				font-size:20px;
+			}
+			.boton:hover
+			{
+				background-color:red;
+				color:white;
+			}
+			.boton:active
+			{
+				background-color:blue;
+				color:white;
+			}
+			.circulo
+			{
+				width:185px;
+				height:185px;
+				background-image:URL('verde.png');
+			}
+			.circulo:hover
+			{
+				background-image:URL('rojo.png');
+			}
+			a
+			{
+				text-decoration:none;
+				color:white;
+			}
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		<div class="boton">
+			<a href="www.ccoo.cat" >Aceptar</a>
+		</div>
+		                                                              
+		
+		<img src="verde.png" onmouseover="this.src='rojo.png'" onmouseout="this.src ='verde.png'">
+ 		
+	</body>
+</html>

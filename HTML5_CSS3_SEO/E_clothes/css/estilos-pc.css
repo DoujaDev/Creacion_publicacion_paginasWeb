@@ -1,0 +1,235 @@
+
+/* -------------------------------------------------
+			estilos  header-top
+------------------------------------------------- */
+.top-container{  /* la caja que contiene la parte superior de la página que incluye la foto del fondo, menú, logo, idiomas, login */
+	margin-bottom:3%;
+}
+
+.idiomas{ /* Características de la capa de idiomas donde puedes elegir entre en el inglés y el castellano */
+	left:2%;
+	top:4%;
+	width:15%;
+}
+
+.idiomas a{
+	font-size:1.2em;
+}
+
+.vl{  /* Características de línea vertical que está entre los dos idiomas */
+	height:25px;
+}
+
+.imglogin{ /* la imagen del login como un icono */
+	width:11%;
+	min-width:28px;
+}
+
+.client a{  /* la palabra login es hipervínculo que lleva a la página login.html */
+	font-size:1.4em;	
+}
+
+@media(min-width:1200px){ /* cambiamos el tamaño de la letra según el tamaño de la pantalla */
+	.client a{font-size:1.5em;}
+}
+
+.client div:last-child{ /* damos un padding al div que contiene la palabra login para separarla */ 
+	padding-top:10%;
+}
+
+/* -------------------------------------------------
+			estilos  container
+------------------------------------------------- */
+
+.parrafo{  /* el párrafo que describe las tendencias del año actual */
+  font-size:2em;
+}
+.textotemporada{    /* el estilo de los nombres de las temporadas, otono, invierno, primavera, y verano */ 
+	font-size:1.5em;	
+}
+
+/* cambiamos el tamaño del texto según el tamaño de la pantalla */
+@media(min-width:850px)
+{
+	.textotemporada{font-size:2.5em;}
+}
+@media(min-width:1000px)
+{
+	.textotemporada{font-size:3em;}
+}
+@media(min-width:1200px)
+{
+	.textotemporada{font-size:3.5em;}
+}
+
+/* -------------------------------------------------
+			el pie de la página
+------------------------------------------------- */
+
+.columna{   /*  cada columna contiene un titulo y sus enlaces que llevan a páginas destintas */
+	width:13%;
+	margin-left:6%;
+}
+
+.linea-movil{  /* la clase borrarpie y linea-movil son activas en las versiones móvil y Tablet es para tener una presentación diferente */
+	display:none;
+}
+
+.footer > div:last-child{ /* la capa que contiene los contactos y las redes sociales flota a la derecha */
+	float:right;
+	width:20%;
+}
+
+/* -------------------------------------------------
+			la página primavera
+------------------------------------------------- */
+.media-foto{  /* para dar las fotos que están representados que párrafos un ancho de 50% en la versión pc */
+	width:50%;
+}
+
+.media-primavera{ /* el ancho de la capa que contiene el título y el páraffo */
+	width:46%;
+	padding: 8% 2% 2% 2%;
+}
+
+.foto-round-right{ /* para dar una forma específica a las fotos presentadas con párrafos sólo en la versión pc */
+	border-radius: 200px 200px 189px 0px;
+	-moz-border-radius: 200px 200px 189px 0px;
+	-webkit-border-radius: 200px 200px 189px 0px;
+	border: 0px solid #000000;
+	padding-left:7%;
+	width:92%;
+}
+
+.foto-round-left{ /* para dar una forma específica a las fotos presentadas con párrafos sólo en la versión pc */
+	border-radius: 200px 200px 0px 200px;
+	-moz-border-radius: 200px 200px 0px 200px;
+	-webkit-border-radius: 200px 200px 0px 200px;
+	border: 0px solid #000000;
+	padding-right:7%;
+	width:92%;
+}
+
+.title-primavera{   /* el estilo de los titulos de los párrafos*/
+  font-size:1.5em;        
+  margin: 5% 0 2% 0;
+}
+
+/* cambiamos el tamaño del texto según el tamaño de la pantalla */
+@media(min-width:1200px){
+	.parrafo-primavera{font-size:1.7em;}
+	.title-primavera{font-size:2em;}
+}
+	
+.registro{ /* Características de la capa que contiene un artículo con su información */
+	width:30%;
+	float:left;
+	margin-left:3%;
+}	
+.marginleft0{ /* damos a las imágenes que están en el comienzo de una nueva línea u margen a 0 */
+	margin-left:0;
+}
+
+
+.img-orden{ /* ponemos un tamaño diferente a las fotos que representan la clasificación de las marcas en la versión pc*/
+	width:5%;
+}
+
+
+.info-top ul li{ /* ponomos nuestro estilo a la lista que contiene la tres marca más compradas */
+	padding: 0 11%;
+}
+
+.info-top a{ /* ponemos el tamaño de los nombres de las marcas a 1.2em */
+	font-size:1.2em;
+}
+/* -------------------------------------------------
+		El menu de la pagina version pc
+------------------------------------------------- */
+.menu{  /*  en la versión pc se muestra un Menú horizontal con hipervínculos */ 
+	display:block;
+	margin:0 0 0 0;	
+	margin-top:0;
+	top:0%;left:40%;
+}
+.menumovil{ /* en la versión pc el menú es diferente por eso ocultamos el menú de la versión tablet y móvil */
+
+	display:none;
+}
+.menu ul li {
+background-color:#56658f;
+background: rgba(86, 101, 143, 0.07);
+background: hsla(224, 25%, 45%, 0.07);
+list-style: none;
+height: 44px;
+float:left;
+padding: 0  0.5%;
+}
+.menu ul li a {
+width:110px;
+height: 40px;
+line-height: 53px;
+border-bottom: 4px solid #ffbb99;
+padding:0px;
+color:#FFF6F9;
+font-size:1.3em;
+font-weight:solid;
+text-align:center;
+font-family: 'Handlee', cursive;
+text-decoration: none;
+display: block;
+-webkit-transition: .2s all linear;
+-moz-transition: .2s all linear;
+-o-transition: .2s all linear;
+transition: .2s all linear;
+}
+
+@media(min-width:1085px)
+{
+	.menu{left:35%}
+}
+@media(min-width:1090px)
+{
+	.menu ul li a{font-size:1.5em;width:120px;}
+	.menu{left:35%;}
+}
+@media(min-width:1200px)
+{
+	.menu ul li a{font-size:1.5em;width:130px;}
+	.menu{left:38%;}
+}
+.menu li:nth-child(1) a {
+border-color: #ffbb99;
+}
+.menu li:nth-child(2) a {
+border-color: #ffbb99;
+}
+.menu li:nth-child(3) a {
+border-color: #ffbb99;
+}
+.menu li:nth-child(4) a {
+border-color: #ffbb99;
+}
+.menu li:nth-child(5) a {
+border-color: #ffbb99;
+}
+.menu li:nth-child(1) a:hover {
+border-bottom: 35px solid #ffbb99;
+height: 9px;
+}
+.menu li:nth-child(2) a:hover {
+border-bottom: 35px solid #ffbb99;
+height: 9px;
+}
+.menu li:nth-child(3) a:hover {
+border-bottom: 35px solid #ffbb99;
+height: 9px;
+}
+.menu li:nth-child(4) a:hover {
+border-bottom: 35px solid #ffbb99;
+height: 9px;
+}
+.menu li:nth-child(5) a:hover {
+border-bottom: 35px solid #ffbb99;
+height: 9px;
+}

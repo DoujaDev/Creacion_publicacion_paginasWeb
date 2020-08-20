@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 7</title>
+		
+	</head>
+	<body>
+		<script>
+			var palabra=prompt("Introduce una palabra:");
+			var numero=parseInt(prompt("Introduce un número"),10);
+			if(isNaN(numero)){
+				alert("Por favor, introduce un número");
+			}
+			else{
+				var i=1;
+				do{
+					document.write(palabra+" ");
+					if((i%10)==0){
+						document.write("<br/>");
+					}
+					i++;
+				}while(i<=numero)
+			}
+		</script>
+	</body>
+</html>

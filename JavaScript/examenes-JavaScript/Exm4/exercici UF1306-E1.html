@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Ejercicio E1 UF1306</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<script src="js/formulario.js"></script>
+</head>
+<body onload="iniciar();" >
+	<div id="cabecera">
+		<h1>Ejercicio E1 UF1306</h1>
+		<h2>Validación datos de formulario</h2>
+	</div>
+	<!-- Formulario de contacto -->
+	<!-- con onblur="mayus(this.id);" llamamos a la funcion mayus que muestra la información introducida en Mayúscula -->
+	<!-- con onkeyup="ayuda('ajuda2');" llamamos a la funcion ayuda que mustra unos textos de auyda según el campo -->
+	<div class="formulario">
+		<form name ="formularioContacto" id="formularioContacto" class="formularioTipo1" method="get" action="https://ca.fundaciopacopuerto.cat/">
+			<p>Rellene el siguiente formulario de contacto:</p>
+			<div class="etiqueta">Razón social:</div><div class="capaderecha"><input type="text" id="razonsocial"  name="razonsocial" onblur="mayus(this.id);" /></div>
+			<div class="etiqueta">CIF:</div><div class="capaderecha"><input class="anchomedio" id="cif" type="text" name="cif" required="on" onblur="mayus(this.id);" onkeyup="ayuda('ajuda1');" /><p id="ajuda1" class="ajuda">*El CIF consta de 9 caracteres, 8 dígitos y una letra al final</p></div>
+			<div class="etiqueta">Dirección:</div><div class="capaderecha"><input class="anchogrande" id="direccion" type="text" name="direccion" onblur="mayus(this.id);" /></div>
+			<div class="etiqueta">CP:</div><div class="capaderecha"><input class="anchopeque" id="cp" type="text" name="cp" required="on" onkeyup="ayuda('ajuda2');"/><p id="ajuda2" class="ajuda">*El CP consta de 5 digitos.</p></div>
+			<div class="etiqueta">Población:</div><div class="capaderecha"><input id="poblacion" type="text" name="poblacion" onblur="mayus(this.id);" /></div>
+			<div class="etiqueta">Email:</div><div class="capaderecha"><input id="email" type="text" name="email" required="required" onkeyup="ayuda('ajuda3');" /><p id="ajuda3" class="ajuda">*Introcude Email correcto: ejemplo@gmail.com</p></div>
+			<div class="etiqueta">Delegación:</div><div class="capaderecha">
+				<input id="barcelona" type="radio" name="delegacion"/> <span>Barcelona </span>
+				<input id="tarragona" type="radio" name="delegacion"/><span> Tarragona </span>
+				<input id="lleida" type="radio" name="delegacion"/> <span > Lleida </span>
+				<input id="girona" type="radio" name="delegacion"/> <span> Girona </span><br/>
+			</div>
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div class="etiqueta">N Trabajadores:</div><div class="capaderecha"><input class="anchopeque" id="ntrabajadores" type="text" name="ntrabajadores" /></div>
+			<div class="etiqueta">Tipo empresa:</div>
+				<div class="capaderecha">
+					<select id="tipoempresa" name="tipoempresa" class="anchomedio">
+						<option value="vacio"></option>
+						<option value="autonomo">Autónomo</option>
+						<option value="sl">Sociedad Limitada</option>
+						<option value="sa">Sociedad Anónima</option>
+						<option value="fundacion">Fundación</option>
+					</select>
+				</div>
+			<div class="etiqueta">Consulta</div><div class="capaderecha"><textarea class="anchogrande textoasunto" id="consulta" name="consulta"></textarea></div>	
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>	
+			<div class="etiqueta">&nbsp;</div>
+			<div class="capaderecha"><input id="acepta" type="checkbox" name="acepta" /> Acepto las condiciones de confidencialidad.</div>	
+			<div class="etiqueta">&nbsp;</div><div class="capaderecha">&nbsp;</div>
+			<div>
+			<!-- se validan todos los campos al pulsar el botón submit:enviar el formulario -->
+				<button type="submit"  value="Enviar" onclick="return validacion();"> Enviar </button>
+				<button type="reset" value="Vaciar"> Cancelar </button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+ 

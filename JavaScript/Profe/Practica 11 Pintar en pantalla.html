@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+	
+	</head>
+	<body>
+		<script>
+			function preguntarnombre()
+			{
+				var nombre=prompt("Como te llamas");
+				document.getElementById("mensaje").innerHTML="Te llamas "+nombre;
+			}
+		
+		</script>
+		
+		<div style="float:left;background-color:red;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="preguntarnombre();" >Mostrar</span>
+		</div>
+		<div style="float:left;background-color:red;color:white;margin:20px;padding:20px;font-size:18px;">
+			Añadir
+		</div>
+		<div style="float:left;background-color:red;color:white;margin:20px;padding:20px;font-size:18px;">
+			Eliminar
+		</div>
+		<div style="float:left;background-color:red;color:white;margin:20px;padding:20px;font-size:18px;">
+			Buscar
+		</div>
+		<div style="clear:both;">
+		<p id="mensaje" style="font-size:20px;">
+			Aqui se mostrarán los resultados
+		</p>
+	</body>
+</html>

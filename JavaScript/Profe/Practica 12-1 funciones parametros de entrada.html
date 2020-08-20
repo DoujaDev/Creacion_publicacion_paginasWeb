@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title></title>
+    <script type="text/javascript">
+			var numero1=0;
+			var numero2=0;
+			
+			function introducir_numeros()
+			{
+				numero1=parseInt(prompt("Introduce el primer número"),10);
+				if (isNaN(numero1))
+				{
+					document.getElementById("mensaje").innerHTML="Error en el numero";
+					return; 
+				}
+				numero2=parseInt(prompt("Introduce el segundo número"),10);
+				if (isNaN(numero2))
+				{
+					document.getElementById("mensaje").innerHTML="Error en el numero";
+					return;
+				}
+				document.getElementById("mensaje").innerHTML="Preparado para realizar la operación";
+			}
+			function operacion(operacion_enviada)
+			{
+				switch(operacion_enviada)
+				{
+					case "suma":
+						document.getElementById("mensaje").innerHTML="el resultado es "+(numero1+numero2);
+						break;
+					case "resta":
+						document.getElementById("mensaje").innerHTML="el resultado es "+(numero1-numero2);
+						break;
+					case "producto":
+						document.getElementById("mensaje").innerHTML="el resultado es "+(numero1*numero2);
+						break;
+					case "division":
+						document.getElementById("mensaje").innerHTML="el resultado es "+(numero1/numero2);
+						break;
+				}
+			}
+	</script>
+</head>
+<body>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="introducir_numeros();">Introducir Números</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="operacion('suma');">Suma</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="operacion('resta');">Resta</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="operacion('producto');">Producto</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="operacion('division');">División</span>
+		</div>
+		<div style="clear:both"></div>
+		<p id="mensaje"></p>
+
+</body>
+</html>

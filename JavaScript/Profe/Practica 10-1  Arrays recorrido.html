@@ -1,0 +1,36 @@
+<!-- En función de tres arrays, 1 con los dias de la semana en castellano, 
+2 con los dias en catalán y 3 con los dias en inglés.
+
+Pedir por pantalla el dia en castellano y enseñarnos ese dia en catalan y en inglés
+
+si el dia indicado es incorrecto o no existe, mostrar un error en pantalla -->
+
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<script>
+			var castellano = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+			var catalan = ["Dilluns","Dimarts","Dimecres","Dijous","Divendres","Dissabte","Diumenge"];
+			var ingles = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+			
+			var dia=prompt("Introduce un dia de la semana en castellano");
+			
+			for(var posicion_array=0;posicion_array<castellano.length;posicion_array++)
+			{
+				if (dia.toUpperCase()==castellano[posicion_array].toUpperCase()) //toUpperCase para que de igual que el usuario lo introduzca en mayuscula o en minuscula
+					{
+						document.write("El "+dia+" en catalán es "+catalan[posicion_array]+"<br/>");
+						document.write("El "+dia+" en inglés es "+ingles[posicion_array]+"<br/>");
+						break;
+					}
+			}
+			if(posicion_array>=castellano.length)
+			{
+				document.write("El día introducido no es correcto o esta vacio");
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

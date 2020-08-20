@@ -1,0 +1,124 @@
+* 
+{
+	margin:0px;
+	padding:0px;	
+}
+.edicion
+{
+	margin:auto;
+	width:700px;
+}
+ul
+{
+	list-style:none;
+}
+.menubarra > li 
+{
+	float:left;
+}
+
+.menubarra li a 
+{
+	background-color:purple; 
+	color:#fff;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+.menubarra > li > a
+{
+	background-color:blue;
+	margin:5px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.menubarra li a:hover 
+{
+	background-color:yellow;
+	color:black;
+	
+}	
+.menubarra > li > a:hover 
+{
+	background-color:green;
+}
+.menubarra li ul
+{
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+.menubarra li:hover > ul 
+{
+	display:block;
+}
+.menubarra li ul li 
+{
+	position:relative;
+}
+
+.menubarra li ul li a
+{
+	right:-140px;
+	top:0px;
+}
+
+.menubarra ul li
+{
+	color:purple;
+}
+
+/* En todo el documento no hay margin ni padding 
+* {
+	margin:0px;
+	padding:0px;
+}
+/* id de la capa, centrado, amplitud de 500px y todo en fuente arial 
+#header {
+	margin:auto;
+	width:500px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/* Todas las listas ordenadas y no ordenadas sin list style 
+ul, ol {
+	list-style:none;
+}
+/* Dentro de la lista no ordenadaTodos los li que tengan como padre la capa .nav flotan a la izquierda 
+.nav > li {
+	float:left;
+}
+/* Dentro de la lista no ordenada, los elementos en el li y a con de color #fff, el fondo #000, sin el subrallado del a,
+con padding en top 10px y en right 12px y se ve en forma de block-level o bloque
+.nav li a {
+	background-color:#000;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+/* Cuando el ratón se pasa por encima de li y a, se cambia el color del fondo 
+.nav li a:hover {
+	background-color:#434343;
+}
+/* Dentro de la lista no ordenada, los elementos li y ul desaparecen sin dejar espacio en blanco, la capa es absoluta, y con
+una anchura mínima de 140px
+.nav li ul {
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+/* Dentro de la lista no ordenada, cuando el ratón pase por encima de ul que tengan como padre los li, aparecerán en forma de bloque 
+.nav li:hover > ul {
+	display:block;
+}
+/* Dentro de la lista no ordenada, los elementos son capas relativas 
+.nav li ul li {
+	position:relative;
+}
+/* Dentro de la lista no ordenada 
+.nav li ul li ul {
+	right:-140px;
+	top:0px;
+}

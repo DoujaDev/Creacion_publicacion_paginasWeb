@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script type="text/javascript" src="juego.js"></script>
+	<style type="text/css">
+		.container
+		{
+			border:10px solid #1f1f2e;
+			width:80%;
+			margin:auto;
+			background:#d1d1e0;
+			overflow:hidden;
+		}
+		body
+		{
+			background:#47476b;
+			font-family:arial;
+		}
+		p
+		{
+			margin:5px;
+		}
+		input
+		{
+			width:40px;
+			font-size:30px;
+		}
+		button
+		{
+			font-size:30px;
+			margin:10px;
+		}
+		.titulo
+		{
+			font-size:48px;
+			text-align:center;
+		}
+		.visor
+		{
+			border:4px solid #1f1f2e;
+			width:60%;
+			margin:auto;
+			background:#d1d1e0;
+			overflow:hidden;
+			font-size:50px;
+			text-align:center;
+			height:90px;
+		}
+		.figura
+		{
+			margin:auto;
+			width:200px;
+		}
+		.imagen
+		{
+			width:100%;
+		}
+		.tablero
+		{
+			width:90%;
+			margin:auto;
+			background:#d1d1e0;
+			overflow:hidden;
+		}
+		.aciertos
+		{
+			border:1px solid #1f1f2e;
+			width:45%;
+			float:left;
+			background:#8686ac;
+			overflow:hidden;
+			font-size:30px;
+			position:relative;
+			padding:15px;
+		}
+		.fallos
+		{
+			border:1px solid #1f1f2e;
+			width:45%;
+			float:right;
+			background:#8686ac;
+			overflow:hidden;
+			font-size:30px;
+			position:relative;
+			padding:15px;
+		}
+		.visor_aciertos_fallos
+		{
+			border:1px solid #1f1f2e;
+			width:90%;
+			margin:auto;
+			background:#d1d1e0;
+			overflow:hidden;
+			font-size:30px;	
+			height:43px;
+		}
+		.comprobar
+		{
+			border:1px solid #1f1f2e;
+			width:30%;
+			paddin:20px;
+			margin:20px auto;
+			background:#d1d1e0;
+			overflow:hidden;
+			font-size:30px;	
+			text-align:center;
+		}
+		.botonera
+		{
+			width:30%;
+			paddin:20px;
+			margin:20px auto;
+			background:#d1d1e0;
+			overflow:hidden;
+			font-size:30px;	
+			text-align:center;
+		}
+		.ocultar{
+			display:none;
+		}
+		.mostrar{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p class="titulo">JUEGO AHORCADO</p>
+		
+		<div class="visor" id="caja_visor"><p id="visor_resultados"></p></div>
+		
+		<div class="figura">
+			<img class="imagen" src="0fallos.png" alt="Figura del ahorcado" title="Figura del ahorcado" id="figura"/>
+		</div>
+		
+		<div class="tablero">
+			<div class="aciertos">
+				ACIERTOS
+				<div class="visor_aciertos_fallos"><p id="los_aciertos"></p></div>
+			</div>
+			
+			<div class="fallos">
+				FALLOS
+				<div class="visor_aciertos_fallos"><p id="los_fallos"></p></div>
+			</div>
+		</div>
+		
+		<div class="comprobar ocultar" id="caja_comprobar">
+			Letra:<input type="text" id="letraelegida" name="letra"/><br/>
+			<button id="comprobar" onclick="buscarletra()">Comprobar</button>
+		</div>
+		
+		<div class="botonera">
+			<button id="empezar" onclick="iniciarjuego();">Empezar</button>
+		</div>
+	<div>	
+</body>
+</html>

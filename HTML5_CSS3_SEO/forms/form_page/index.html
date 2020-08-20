@@ -1,0 +1,52 @@
+<! DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario</title>
+		<link href="css/formulario1.css" rel="stylesheet" type="text/css" />
+			
+	</head>
+	<body>
+		<form method="POST" action="enviar.php">
+			<div class="label"><label for="nombre">Nombre: </label></div><div><input type="text" name="nombre" required="required" max="15" placeholder="Su Nombre..." /></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="apellidos">Apellidos: </label></div><div><input type="text" name="apellidos" required="required" max="25" placeholder=" Sus appellidos..." /></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="direccion">Dirección: </label></div><div><input type="text" name="direccion"  max="25" placeholder="Su dirección..." disabled /></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="cp">CP: </label></div><div><input style="width:80px;" pattern="[0-9]{5}"  maxlength="5" type="text" name="cp"/></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="poblacion">Población: </label></div>
+			<div>
+				<select name="poblacion" autofocus="autofocus">
+					<option value="Barcelona">Barcelona</option>
+					<option value="Tarragona">Terrassa</option>
+					<option value="Lleida">Tarragona</option>
+					<option value="Girona">Gerona</option>
+				</select>
+			</div>
+			<div class="borrar"></div>
+			<div class="label"><label for="casado">Casado/a: </label></div><div><input style="margin-top:24px;" checked="checked" type="checkbox" name="casado" /></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="ficha"> Ficha de nacimiento: </label></div><div><input type="date"  name="ficha" /></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="hijos">Hijos: </label></div><div><input style="width:80px;" type="number" min="0" max="10" name="hijos"/></div>
+			<div class="borrar"></div>
+			<div class="label"><label for="email">Email: </label></div><div><input type="email" name="email" required="required" /></div>
+			<div class="borrar"></div>
+			
+			<div class="label"><label for="sexo">Sexo: </label></div>
+			<div><input style="margin-top:23px;" type="radio" name="sexo" value="hombre" required="required"/>Hombre<br/></div>
+			<div><input style="margin-top:23px;" type="radio" name="sexo" value="mujer" required="required"/>Mujer</div>
+			<div class="borrar"></div>
+			<div><style="margin-top:23px;" label for="consulta">Consulta: </label></div>
+			<div><textarea name="mensaje" rows="10" cols="60"	></textarea></div>
+			
+			<div class="borrar"></div>
+			<div class="media"><input type="submit" value="Enviar" /></div>
+			<div class="media"><input type="reset" value="Borrar" /></div>
+			
+			
+		</form>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Ejercicio 1</title>
+	<script type="text/javascript">
+		function validar(elEvento)
+		//con esta funcion controlamos que los datos introducidos sean numeros del 1 al 9,
+		//y la tecla de retroceso, en estos casos devolvemos TRUE y se escribe
+		//en cualquier otro caso devolvemos False y no se escribe
+		{
+			var ObjTecla = window.event || elEvento; //asignacion del evento para explorer y (mozilla y chrome)
+			var tecla=ObjTecla.keyCode;
+			console.log("El numero es "+tecla); //imprime por pantalla el codigo de la tecla 
+			console.log("La letra es "+String.fromCharCode(tecla)); //imprime por pantalla el valor de la tecla
+			if (tecla>=48 && tecla<=57) return true; //Solo acepto de 0 a 9
+			return false;
+		}
+	</script>
+</head>
+ 
+<body>
+	<input type="text" name="txt" onkeypress="return validar(event);">
+</body>
+</html>
+
+ 
+
+ 

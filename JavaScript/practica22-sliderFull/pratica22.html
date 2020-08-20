@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica22</title>
+		<style>
+			.container{
+				width:1050px;
+				position:relative;
+				margin:auto;
+				overflow:hidden;
+				height:630px;
+			}
+			.prev, .next {
+			  cursor:pointer;
+			  position:absolute;
+			  top:60%;
+			  width:auto;
+			  margin-top:-22px;;
+			  padding:16px;
+			  color:white;
+			  font-weight:bold;
+			  font-size:1.5em;
+			  transition:0.6s ease;
+			  border-radius:0 3px 3px 0;
+			  user-select:none;
+			}
+			.next{
+				right:0;
+				border-radius:3px 0 0 3px;
+			}
+		</style>
+		<script src="js/sliderFull.js"></script>
+	</head>
+		
+	<body onload="iniciar();">
+		<div class="container">
+			<div id="f0" style="position:absolute;left:-1050px"><img  id="fotoI" src="img/cat2.jpg"></div>
+			<div id="f1"style="position:absolute;left:0px"><img id="fotoC" src="img/cat1.jpg"></div>
+			<div id="f2"style="position:absolute;left:1050px"><img id="fotoD" src="img/cat5.jpg"></div>
+			 <a class="prev" id="anterior" onclick="menos()">&#10094;</a>
+			 <a class="next" id="siguiente" onclick="plus()">&#10095;</a>
+		</div>
+	</body>
+</html>

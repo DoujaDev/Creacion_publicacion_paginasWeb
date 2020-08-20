@@ -1,0 +1,101 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<script>
+			function ejer1()
+			{
+				var color=prompt("Introduce el color");
+				if (color=="verde")
+				{
+					alert("Paso");
+				}
+				else
+				{
+					alert("Paro");
+				}
+			}
+			function ejer2()
+			{
+				var nota=parseInt(prompt("Introduce la nota"),10);
+				if (nota>=5)
+				{
+					alert("Aprobado");
+				}
+				else
+				{
+					alert("Supenso");
+				}
+			}
+			function ejer3()
+			{
+				var comision=0;
+				var ventas=parseInt(prompt("Introduce tus ventas"),10);
+				if (ventas>20000)
+				{
+					comision=ventas*0.1;
+				}
+				else
+				{
+					comision=ventas*0.08;
+				}
+				alert("Tu comisión es "+comision);
+			}
+			function ejer4()
+			{
+				var color=prompt("Introduce el color");
+				if (color=="verde")			
+					{
+						alert("Pasa");
+					}
+				else if(color=="rojo")
+					{
+					alert("Para");
+					}
+					else
+					{
+					alert("Precaución");
+					}
+			}
+			function ejer5()
+			{
+				var sueldo=0;
+				var horas=parseFloat(prompt("Introduce las horas trabajadas"),10);
+				var precio=parseFloat(prompt("Introduce el precio hora"),10);
+				
+				if (isNaN(horas)) 
+					{
+					alert ("Las horas introducidas son incorrectas");
+					}
+					else if(isNaN(precio))
+						{
+						alert ("El precio introducido es incorrecto");
+						}
+						else
+						{
+							if (horas>35)
+							{
+								//Calculamos cuando tiene horas extras
+								sueldo=35*precio+(horas-35)*precio*1.5;
+							}
+							else
+							{
+								//Calculamos cuando sin horas extras
+								sueldo=horas*precio;
+							}
+							alert("Tu sueldo es "+sueldo+" €");	
+						}
+			}
+			
+		</script>
+		<style>
+			p{cursor: pointer;}
+		</style>
+	</head>
+	<body>
+		<p onclick="ejer1();">Ejercicio 1</p><br>
+		<p onclick="ejer2();">Ejercicio 2</p><br>
+		<p onclick="ejer3();">Ejercicio 3</p><br>
+		<p onclick="ejer4();">Ejercicio 4</p><br>
+		<p onclick="ejer5();">Ejercicio 5</p><br>
+	</body>
+</html>

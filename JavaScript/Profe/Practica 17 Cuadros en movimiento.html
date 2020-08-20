@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script>
+	function iniciar()
+	{
+		document.getElementById("cuadrado").style.backgroundColor="red";
+		reloj1=setInterval("abajo()",10);
+	}
+	function abajo()
+	{
+		
+		document.getElementById("cuadrado").style.top=document.getElementById("cuadrado").offsetTop+10+"px";
+		if (document.getElementById("cuadrado").offsetTop>650)
+		{
+		clearInterval(reloj1);
+		reloj_derecha();
+		}
+	}
+	function reloj_derecha()
+	{
+		document.getElementById("cuadrado").style.backgroundColor="blue";
+		reloj1=setInterval("derecha()",10);
+	}
+	function derecha()
+	{
+		
+		document.getElementById("cuadrado").style.left=document.getElementById("cuadrado").offsetLeft+10+"px";
+		if (document.getElementById("cuadrado").offsetLeft>1100)
+		{
+		clearInterval(reloj1)
+		reloj_arriba();
+		;}
+	}
+	function reloj_arriba()
+	{
+		document.getElementById("cuadrado").style.backgroundColor="purple";
+		reloj1=setInterval("arriba()",10);
+	}
+	function arriba()
+	{
+		
+		document.getElementById("cuadrado").style.top=document.getElementById("cuadrado").offsetTop-10+"px";
+		if (document.getElementById("cuadrado").offsetTop<10)
+		{
+		clearInterval(reloj1);
+		reloj_izquierda()
+		}
+	}
+	function reloj_izquierda()
+	{
+		document.getElementById("cuadrado").style.backgroundColor="green";
+		reloj1=setInterval("izquierda()",10);
+	}
+	function izquierda()
+	{
+		document.getElementById("cuadrado").style.left=document.getElementById("cuadrado").offsetLeft-10+"px";
+		if (document.getElementById("cuadrado").offsetLeft<10)
+		{clearInterval(reloj1);
+		iniciar();}
+	}
+	
+	</script>
+	
+</head>
+<body onload="iniciar();">
+		<div id="cuadrado" style="width:150px;height:150px;background-color:red;position:absolute;">
+		</div>
+</body>
+
+</html>

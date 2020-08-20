@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Cambio de color de fondo de la web cada X tiempo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Ejemplo Cookies</title>
+    <script type="text/javascript">
+		var cronometro;
+		var numero_inicial=10;
+		function reloj()
+		{
+			clearInterval(cronometro);
+			numero_inicial=10;
+			cronometro=setInterval("bajar_tiempo()",100);
+		}
+		function bajar_tiempo()
+		{
+			
+			numero_inicial=numero_inicial.toFixed(1);
+			document.getElementById("mensaje").innerHTML=numero_inicial;
+			
+			numero_inicial=numero_inicial-0.1;
+			if(numero_inicial<0)
+			{clearInterval(cronometro);}
+		}
+		
+	</script>
+</head>
+<body >
+	<p id="mensaje" style="font-size:300px;text-align:center;margin:30px;"></p>
+	<button onclick="reloj();">Iniciar</button>
+</body>
+</html>

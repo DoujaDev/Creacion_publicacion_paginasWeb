@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>R1 </title>
+		<script>
+			var paga;
+			var horas=parseInt(prompt("Introduce el nombre de las horas"),10);
+			var precio=parseInt(prompt("Introduce el precio"),10);
+			if(isNaN(horas)){
+				document.write("Por favor introduce un numero de horas correcto");
+			}
+			else if(isNaN(precio)){
+				document.write("Por favor introduce un numero precio correcto");
+			}
+			
+			else{
+				if(horas<=35){
+					paga=horas*precio;
+				}
+				else{
+					var pagaEx=precio+(precio*0.5);
+					paga=(35*precio)+(horas-35)*pagaEx;
+				}
+				document.write("Su salario bruto es: "+paga);
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<script>
+			
+			var numero_inicial=parseInt(prompt("Introduce el número inicial"),10);
+			var numero_final=parseInt(prompt("Introduce el número final"),10);
+			
+			if(isNaN(numero_inicial) || isNaN(numero_final) || numero_final<numero_inicial)
+			{
+				document.write("Los numeros son incorrecto o el segundo es inferior al primero");
+			}
+			else
+			{			
+				for(var c=numero_inicial;c<=numero_final;c++)
+				{
+					document.write(c+"<br/>");
+				}
+				
+				document.write("<br/><br/><br/>");
+				
+				for(var c=numero_final;c>=numero_inicial;c--)
+				{
+					document.write(c+"<br/>");
+				}	
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

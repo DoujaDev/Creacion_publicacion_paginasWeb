@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica </title>
+		<script>
+			var numero1=0;
+			var numero2=0;
+			function introducir_numeros(){
+				numero1=parseInt(prompt("Introduce el primer número"),10);
+				if(isNaN(numero1)){
+					document.getElementById("mensaje").innerHTML="error en el numero";
+					return;
+				}	
+				numero2=parseInt(prompt("Introduce el segundo número"),10);
+				if(isNaN(numero2)){
+					document.getElementById("mensaje").innerHTML="error en el numero";
+					return;
+				}
+				document.getElementById("mensaje").innerHTML="preparado para hacer la operación";
+			}
+			
+			function calcular(tipocalculo){
+				switch(tipocalculo){
+					case "suma":
+						document.getElementById("mensaje").innerHTML="La suma es: "+(numero1+numero2);
+						break;
+						case "resta":
+						document.getElementById("mensaje").innerHTML="La resta es: "+(numero1-numero2);
+						break;
+						case "producto":
+						document.getElementById("mensaje").innerHTML="El producto es: "+(numero1*numero2);
+						break;
+						case "division":
+						document.getElementById("mensaje").innerHTML="la division es: "+(numero1/numero2);
+						break;
+				}	
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="introducir_numeros();" >Introducir Números</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="calcular('suma');" >Suma</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="calcular('resta');">Resta</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="calcular('producto');">Producto</span>
+		</div>
+		<div style="float:left;background-color:gray;color:white;margin:20px;padding:20px;font-size:18px;">
+			<span onclick="calcular('division');">División</span>
+		</div>
+		<div style="clear:both;">
+		<p id="mensaje">El resultado</p>
+	</body>
+</html>
